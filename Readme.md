@@ -1,7 +1,7 @@
-# Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+﻿# Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Бирюлин](https://up.htmlacademy.ru/adaptive/13/user/353501).
-* Наставник: `Неизвестно`.
+* Наставник: Без наставника.
 
 ---
 
@@ -58,3 +58,4 @@ git clone SSH-адрес_вашего_форка
 [travis-url]: https://travis-ci.org/htmlacademy-adaptive/353501-mishka
 [dependency-image]: https://david-dm.org/htmlacademy-adaptive/353501-mishka/dev-status.svg?style=flat-square
 [dependency-url]: https://david-dm.org/htmlacademy-adaptive/353501-mishka?type=dev
+
