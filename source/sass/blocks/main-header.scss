@@ -16,7 +16,7 @@
   width: 270px;
   min-height: 20px;
   margin: 0 auto;
-  }
+}
 
 .main-header__title {
   padding-top: 70px;
@@ -70,7 +70,7 @@
   background-color: #63d1bb;
 }
 
-.main-header__list-item--interior a:before {
+.main-header__list-item--interior a::before {
   content: "Предметы интерьера"; // - обязательно, чтобы он отрисовался */
   display: block;
   width: 110px;
@@ -81,12 +81,12 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
-  letter-spacing: 0.050em;
+  letter-spacing: 0.05em;
   text-align: left;
   color: #ffffff;
 }
 
-.main-header__list-item--interior a:after {
+.main-header__list-item--interior a::after {
   content: ""; // - обязательно, чтобы он отрисовался */
   position: absolute;
   top: 23px; // привязка псевдоэлемента в родительском контейнере*/
@@ -108,7 +108,7 @@
   background-color: #56c3b2;
 }
 
-.main-header__list-item--toy a:before {
+.main-header__list-item--toy a::before {
   content: "Детские игрушки"; // - обязательно, чтобы он отрисовался */
   display: block;
   width: 110px;
@@ -124,7 +124,7 @@
   color: #ffffff;
 }
 
-.main-header__list-item--toy a:after {
+.main-header__list-item--toy a::after {
   content: ""; // - обязательно, чтобы он отрисовался */
   position: absolute;
   top: 21px; // привязка псевдоэлемента в родительском контейнере*/
