@@ -171,8 +171,7 @@
 // за вот этим строгим индикатором */
 // единственное добавляем условие(усложняем) - при состоянии checked для реального поля ввода */
 // Создаём псевдоэлемент - прямоугольничек и скругляем его */
-.order-form__radio input[type="radio"]:checked +
-.order-form__checkbox-indicator::before {
+.order-form__radio input[type="radio"]:checked + .order-form__checkbox-indicator::before {
 
   content: "";
 
@@ -190,26 +189,22 @@
 // Подсветки */
 
 // Подсветка (любого) поля (круга (без текста)) */
-.pattern_form_radio input[type="radio"]:hover +
-.pattern_checkbox_indicator {
+.pattern_form_radio input[type="radio"]:hover + .pattern_checkbox_indicator {
   border-color: #4d4d4d;
 }
 
 // disabled (любого) поля (круга (без текста)) */
-.pattern_form_radio input[type="radio"]:disabled +
-.pattern_checkbox_indicator {
+.pattern_form_radio input[type="radio"]:disabled + .pattern_checkbox_indicator {
   border-color: #ededed;
 }
 
 // Подсветка чекнутого поля (псевдоэлемента - сердцевины "точки") */
-.pattern_form_radio:hover input[type="radio"]:checked +
-.pattern_checkbox_indicator::before {
+.pattern_form_radio:hover input[type="radio"]:checked + .pattern_checkbox_indicator::before {
   background-color: #4d4d4d;
 }
 
 // disabled чекнутого поля (псевдоэлемента - сердцевины "точки") */
-.pattern_form_radio input[type="radio"]:checked:disabled +
-.pattern_checkbox_indicator::before {
+.pattern_form_radio input[type="radio"]:checked:disabled + .pattern_checkbox_indicator::before {
   background-color: #ededed;
 }
 
@@ -219,8 +214,7 @@
 }
 
 // текст радиобаттона при :disabled */
-.pattern_form_radio input[type="radio"]:disabled +
-.pattern_checkbox_indicator + .pattern_form_text {
+.pattern_form_radio input[type="radio"]:disabled + .pattern_checkbox_indicator + .pattern_form_text {
   color: #bec1c2; // меняем текст при :disabled */
 }
 
@@ -309,8 +303,7 @@
 // "+" означает что pattern_checkbox_indicator должен идти сразу за input */
 // просто сделан более строгий селектор */
 // этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
-.order-form_checkbox input[type="checkbox"] +
-.order-form__checkbox-indicator {
+.order-form_checkbox input[type="checkbox"] + .order-form__checkbox-indicator {
   position: absolute;
   top: 6px;
   left: 0;
@@ -328,8 +321,7 @@
 // за вот этим строгим индикатором */
 // единственное добавляем условие(усложняем) - при состоянии checked для реального поля ввода */
 // Создаём псевдоэлемент - прямоугольничек и скругляем его */
-.order-form_checkbox input[type="checkbox"]:checked +
-.order-form__checkbox-indicator::before {
+.order-form_checkbox input[type="checkbox"]:checked + .order-form__checkbox-indicator::before {
 
   content: "";
 
