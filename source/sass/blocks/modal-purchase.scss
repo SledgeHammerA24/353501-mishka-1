@@ -187,7 +187,7 @@
 // "+" означает что pattern_checkbox_indicator должен идти сразу за input */
 // просто сделан более строгий селектор */
 // этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
-.modal-purchase__item-size input[type="radio"] + 
+.modal-purchase__item-size input[type="radio"] +
 .modal-purchase__checkbox-indicator {
   position: absolute;
   top: -2px;
@@ -231,13 +231,13 @@
 // Подсветки */
 
 // Подсветка (любого) поля (без текста) */
-.modal-purchase__item-size input[type="radio"]:hover + 
+.modal-purchase__item-size input[type="radio"]:hover +
 .modal-purchase__checkbox-indicator {
   border-color: #c7c7c7;
 }
 
 // чекнутое поле */
-.modal-purchase__item-size input[type="radio"]:checked + 
+.modal-purchase__item-size input[type="radio"]:checked +
 .modal-purchase__checkbox-indicator {
   border-color: #62d1ba;
 }
