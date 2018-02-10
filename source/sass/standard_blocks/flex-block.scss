@@ -1,0 +1,29 @@
+
+//
+.flex-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  //background-color: yellow;
+}
+
+.flex-block--flex-start {
+  justify-content: flex-start;
+}
+
+
+.flex-block--space-between {
+  justify-content: space-between;
+}
+
+.flex-block--direction-column {
+  flex-direction: column;
+}
+
+.flex-block--wrap {
+  flex-wrap: wrap;
+  align-content: flex-start;
+}

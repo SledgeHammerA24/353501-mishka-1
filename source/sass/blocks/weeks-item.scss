@@ -1,0 +1,119 @@
+
+.weeks-item {
+  width: 260px;
+  height: 825px;
+
+  background-color: blue;
+}
+
+.weeks-item__title-1 {
+  margin: 0;
+  padding-top: 29px;
+
+  letter-spacing: 0.05em;
+}
+
+.weeks-item__title-2 {
+  margin: 0;
+  padding-top: 4px;
+
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+
+.weeks-item__text {
+  padding-top: 9px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.035em;
+  text-align: left;
+  color: #444444;
+}
+
+.weeks-item__properties-table {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+
+  background-color: magenta;
+}
+
+.weeks-item__properties-table td {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 18px;
+  //padding: 0;  // имеет высший приоритет над свойствами строк и столбцов */
+  //padding-top: 36px;  // имеет высший приоритет над свойствами строк и столбцов */
+
+  //border: 1px solid black;
+}
+
+// задание свойств ячеек-заголовка */
+.weeks-item__properties-table th {
+  width: 92px;
+  padding-bottom: 18px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: normal;
+  color: #444444;
+}
+
+// задание свойств ячеек */
+.weeks-item__table-cell {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: normal;
+  color: #444444;
+}
+
+// позиционирование первого ряда */
+.weeks-item__trow--tr1 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.weeks-item__photo {
+  margin-top: 19px;
+}
+
+// перестраховка. явное задание размеров картинки */
+.weeks-item__photo img {
+  width: 260px;
+  height: 315px;
+}
+
+.weeks-item__price {
+  padding-top: 0;
+  padding-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.045em;
+  text-align: center;
+  color: #5d5d5d;
+}
+
+.weeks-item--btn {
+  width: 90px;
+  height: 17px;
+  padding: 15px 83px;
+
+  font-weight: 700;
+  color: #444444;
+
+  border: 2px solid #444444;
+}
+
+.weeks-item--btn a {
+  width: 73px;
+
+  text-decoration: none;
+}

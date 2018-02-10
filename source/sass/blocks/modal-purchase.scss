@@ -1,0 +1,271 @@
+
+.modal-purchase {
+  position: absolute; // выносим окошко наверх абсолютно, а не во вьюпорте*/
+  //position: fixed; // fixed - всегда относительно viewport (видимой области внутри окна броузера) */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: none; // временное скрытие */
+  width: 320px;
+  min-height: 3932px;
+  margin: 0 auto;
+
+  color: #000000;
+
+  //background: #ffffff url("../img/wfon/modal.png");
+  background-color: #ffffff;
+}
+
+.modal-purchase__purchase-wrapper {
+  display: block;
+  width: 320px;
+  min-height: 335px;
+  margin-top: 1045px;
+
+  color: #000000;
+
+  // background-color: #ffffff;
+  border: none;
+  border-top: 1px solid #c7c7c7;
+  border-radius: 2px;
+  box-shadow: 0 7px 12px -2px #c7c7c7;
+}
+
+.modal-purchase__header-wrapper {
+  position: relative;
+
+  display: block;
+  width: 320px;
+  min-height: 40px;
+  padding-top: 22px;
+
+  color: #000000;
+
+  // background-color: #ffffff;
+}
+
+// Бокс Закрывающего крестика */
+.modal-purchase__close-box {
+  position: absolute;
+  top: 20px; // позиционирование крестика внутри закрывающего прямоугольничка */
+  left: 270px;
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+
+  font-size: 0;
+
+  background-color: #fafafa;
+  border: 0;
+  border-radius: 1px;
+
+  cursor: pointer;
+}
+
+// Создаём два псевдоэлемента - два прямоугольничка */
+.modal-purchase__close-box::before,
+.modal-purchase__close-box::after {
+
+  content: "";
+
+  position: absolute;
+  top: 0; // позиционирование крестика внутри закрывающего прямоугольничка */
+  left: 0;
+
+  display: block;
+  width: 26px; // - ширина прямоугольничков - палочки крестика*/
+  height: 3px; // - толщина прямоугольничков - палочки крестика*/
+
+  background-color: #000000; // - цвет прямоугольничков */
+  border-radius: 1px;
+}
+
+// Разворачиваем на 45 градусов */
+.modal-purchase__close-box::before {
+  transform: rotate(45deg);
+}
+
+.modal-purchase__close-box::after {
+  transform: rotate(-45deg);
+}
+
+// Подсветка крестика при наведении */
+.modal-purchase__close-box:hover::before,
+.modal-purchase__close-box:hover::after {
+  background-color: #fb565a;
+}
+
+// Подсветка крестика при нажатии */
+.modal-purchase__close-box:active::before,
+.modal-purchase__close-box:active::after {
+  opacity: 0.1;
+}
+
+.modal-purchase__title {
+  display: block;
+  width: 160px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 10px;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.modal-purchase__text {
+  display: block;
+  width: 160px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 10px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  color: #444444;
+}
+
+
+.modal-purchase__form-wrapper {
+  display: block;
+  width: 260px;
+  min-height: 120px;
+  padding: 0;
+  padding-top: 4px;
+  margin: 0 auto;
+}
+
+
+.modal-purchase__sizes-wrapper {
+  width: 260px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.modal-purchase__item-size {
+  position: relative;
+
+  display: block;
+  width: 78px;
+  height: 48px;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  //border: 2px solid #ececec;
+}
+
+//.modal-purchase__item-size:nth-child(1) {
+//  border: 2px solid #63d1bb;
+//}
+
+
+// Делаем Декоративный квадратный чекбокс */
+
+// Дальше пошла жара. Прячем истинный чекбокс */
+.modal-purchase__item-size input[type="radio"] {
+  display: none; // - так прятать плохой вариант. в некоторых броузерах глючит */
+}
+
+// Дальше рисуем квадратик в span */
+// можно обойтись и без input. Он добавлен для большей строгости */
+// "+" означает что pattern_checkbox_indicator должен идти сразу за input */
+// просто сделан более строгий селектор */
+// этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
+.modal-purchase__item-size input[type="radio"] + .modal-purchase__checkbox-indicator {
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  width: 78px;
+  height: 48px;
+  border: 2px solid #ececec; // толщина квадратика, будущего кружка */
+  border-radius: 1px; // скругление квадратика */
+
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+.modal-purchase__size-text {
+  position: absolute;
+  top: 15px;
+  left: 34px;
+
+  display: inline-block;
+  width: 30px;
+  min-height: 5px;
+  //margin-left: 65px;
+  //margin-top: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  vertical-align: middle;
+  //text-transform: uppercase;
+  letter-spacing: 0.03em;
+  overflow: hidden;
+  color: #000000;
+
+  //background-color: pink;
+  cursor: pointer;
+}
+
+// Подсветки */
+
+// Подсветка (любого) поля (без текста) */
+.modal-purchase__item-size input[type="radio"]:hover + .modal-purchase__checkbox-indicator {
+  border-color: #c7c7c7;
+}
+
+// чекнутое поле */
+.modal-purchase__item-size input[type="radio"]:checked + .modal-purchase__checkbox-indicator {
+  border-color: #62d1ba;
+}
+
+.modal-purchase__btn-wrapper {
+  width: 260px;
+  min-height: 80px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+// Кнопка на всю ширину контейнера */
+
+.modal-purchase__btn {
+  display: block;
+  width: 260px;
+  min-height: 18px;
+  padding: 18px 0; // центровка маргином. фикс паддинг убираем */
+  margin: 0 auto; // центруем маргином */
+  //margin-top: 20px; // отталкиваемся от верхнего коноейнера */
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  //font-size: 0px;
+  line-height: 18px;
+  text-decoration: none;
+  letter-spacing: 0.035em;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #63d1bb;
+}

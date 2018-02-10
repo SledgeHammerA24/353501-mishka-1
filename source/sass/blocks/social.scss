@@ -1,0 +1,74 @@
+
+.social {
+  width: 260px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.social__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  width: 160px;
+  height: 45px;
+  margin: 0 auto;
+  padding-top: 15px;
+
+  background-color: grey;
+}
+
+// Устройство кнопки (физические размеры, убирание текста) для социальных кнопок */
+.social__btn {
+  position: relative;
+
+  width: 46px;
+  height: 45px;
+
+  font-size: 0;
+
+  background-color: #e1e1e1;
+
+  transition:
+    background-position 0.5s,
+    background-color 0.5s;
+}
+
+// вставка спрайта в кнопку social_btn */
+// Действо разбито на 2 части, потому что есть 3 кнопки - ВК, FB и Insta*/
+// У всех трёх кнопок есть общая часть - и это часть1, индивидуальная часть - часть2 */
+// а так в принципе всё можно сделать одним движением без частей */
+// и даже без псевдоэлемента (см вставку спрайта в попап) */
+
+// Устройство псевдоэлемента ч.1 */
+// 1. команда на размещение псевдоэлемента внутри кпопки Login - content ""; */
+// 2. указание конкретного (вставка нужного) спрайта в кнопку login - background-image*/
+// 3. двигаем окошко спрайта 15х15 в кнопке Login - top, left, transform */
+.social__btn::before {
+  content: ""; // - обязательно, чтобы он отрисовался */
+  position: absolute;
+  top: 50%; // привязка центра масс окошка любой иконки (ВК ФБ Инст)  в окошке social_btn 50% сверху*/
+  left: 50%;// привязка центра масс окошка (ВК ФБ Инст)  в окошке social_btn 50% слева */
+  transform: translate(-50%, -50%); // сдвиг(перемещение в плоскости в направлении вправо-вниз) окошка спрайта относительно себя на половину своей ширины и длины*/
+  background-image: url("../img/decoration/sprite.png"); // само помещение спрайта в окошко(или кнопку)*/
+  background-repeat: no-repeat;
+}
+
+.social__btn:hover {
+  // background-color: rgba(231, 66, 70, 0.5);  /* дополнительно прозрачность при наведении */
+  background-color: #e74246;
+}
+
+// Стилизация социальных кнопок при нажатии */
+// 1. Задание цвета при нажатии для всей кнопки */
+.social__btn:active {
+  background-color: #d7373b; // дополнительно прозрачность при наведении */
+  box-shadow: inset 0 3px 1px 1px #c13135; // делаем тень кнопки */
+}
+
+// 1. Задание непрозрачности только иконке (кнопку(цвет) осветлять не надо) */
+.social__btn:active::before {
+  opacity: 0.3;
+}

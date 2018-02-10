@@ -2,47 +2,47 @@
 <html lang="ru">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> <!-- подключение шрифтов. обязательно до ВСЕХ стилей -->
-    <link rel="stylesheet" href="css/normalize.css"> <!-- подключение номализации шрифтов. обязательно до стилей -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-    <link href="css/main_nav_flex.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
-    <title>Мишка: Форма заказа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Магазин Мишка: Форма заказа</title>
   </head>
   <body>
 
-  <!-- 1. Заголовок header (основная шапка сайта) -->
-  <header class="page-header">
-    <div class="page-header-layout container"> <!--div-Центровщик содержимого шапки container -->
+    <!-- 1. Заголовок header (основная шапка сайта) -->
+    <header class="page-header">
+      <div class="page-header__wrapper flex-block container">
 
-    <!-- 1.1 Логотип -->
-    <div class="page-header__index-logo">
-      <a href="index.html">
-        <img src="img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
-      </a>
-    </div> <!--Закрытие Логотипа -->
+      <!-- 1.1 Логотип -->
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo-ref" href="index.html">
+          Открыть меню
+          <img class="page-header__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
+        </a>
+      </div> <!--Закрытие Логотипа -->
 
-    <!-- 1.2 Кнопка меню -->
-    <nav class="page-header__nav-container">
-      <a class="page-header__menu-button-toggle" href="#">Открыть меню</a>
-    </nav> <!--Закрытие кнопки меню -->
+      <!-- 1.2 Кнопка меню -->
+      <nav class="page-header__nav-container">
+        <a class="page-header__menu-button-toggle" href="#">Открыть меню</a>
+      </nav> <!--Закрытие кнопки меню -->
 
-    </div> <!--Закрытие центровщика шапки container -->
-    </header> <!--Закрытие шапки header main -->
+      </div> <!--Закрытие центровщика шапки container -->
+    </header> <!--Закрытие шапки сайта -->
 
     <!-- 2. Раздел main - уникальное содержание страницы + центровщик container -->
-    <main class="container">
+    <main>
 
-      <h1 class="visually__hidden">Интернет-магазин "Мишка" - форма заказа</h1>
+      <!--<h1 class="visually__hidden">Интернет-магазин "Мишка" - форма заказа</h1> -->
 
-      <section class="order-form clearfix">
+      <section class="order-form">
 
-        <!-- 2.1 Фоновая картинка с заголовком страницы -->
-        <div class="order-form__head">
+        <!-- 2.1 заголовок страницы -->
+        <header class="order-form__header-wrapper">
           <h1 class="order-form__title">Вязание на заказ</h1>
-          <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        </div> <!--Закрытие Корзины -->
+          <p class="order-form__title-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        </header> <!--Закрытие заголовка формы -->
 
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="container" action="https://echo.htmlacademy.ru" method="get">
 
           <!-- 2.1.2 фильтр "Тип" в виде формы радиобаттонов -->
           <fieldset class="order-form__type-form">
@@ -51,12 +51,12 @@
             <label class="order-form__radio">
               <input type="radio" name="Features" value="Аксессуар для интерьера" checked>
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form_form-text">Аксессуар для интерьера</span>
+              <span class="order-form__type-text">Аксессуар для интерьера</span>
             </label>
             <label class="order-form__radio">
               <input type="radio" name="Features" value="Детская игрушка">
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form_form-text">Детская игрушка</span>
+              <span class="order-form__type-text">Детская игрушка</span>
             </label>
           </fieldset> <!--Закрытие Блока фильтр "Тип" -->
 
@@ -67,32 +67,32 @@
             <label class="order-form_checkbox">
               <input type="checkbox" name="white" checked>
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form__text">Белый</span>
+              <span class="order-form__checkbox-text">Белый</span>
             </label>
             <label class="order-form_checkbox">
               <input type="checkbox" name="grey" checked>
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form__text">Серый</span>
-            </label>гн
+              <span class="order-form__checkbox-text">Серый</span>
+            </label>
             <label class="order-form_checkbox">
               <input type="checkbox" name="tiffany">
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form__text">"Тиффани"</span>
+              <span class="order-form__checkbox-text">"Тиффани"</span>
             </label>
             <label class="order-form_checkbox">
               <input type="checkbox" name="black">
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form__text">Чёрный</span>
+              <span class="order-form__checkbox-text">Чёрный</span>
             </label>
             <label class="order-form_checkbox">
               <input type="checkbox" name="pink">
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form__text">Розовый</span>
+              <span class="order-form__checkbox-text">Розовый</span>
             </label>
             <label class="order-form_checkbox">
               <input type="checkbox" name="orange">
               <span class="order-form__checkbox-indicator"></span>
-              <span class="order-form__text">Оранжевый</span>
+              <span class="order-form__checkbox-text">Оранжевый</span>
             </label>
           </fieldset> <!--Закрытие Блока фильтр "Цвет" -->
 
@@ -100,17 +100,17 @@
           <fieldset class="order-form__name-form">
             <legend class="order-form__name-form-title">фио</legend>
 
-            <label class="order-form__name_label">
+            <label class="order-form__name">
               <span class="order-form__name-form-text">Имя:</span>
-              <input class="order-form__firstname" type="text" name="firstname" placeholder="Введите ваше имя*">
+              <input class="order-form__name-input" type="text" name="firstname" placeholder="Введите ваше имя*">
             </label>
-            <label class="order-form__name_label">
+            <label class="order-form__name">
               <span class="order-form__name-form-text">Фамилия:</span>
-              <input class="order-form__surename" type="text" name="surename" placeholder="Укажите фамилию*">
+              <input class="order-form__name-input" type="text" name="surename" placeholder="Укажите фамилию*">
             </label>
-            <label class="order-form__name_label">
+            <label class="order-form__name">
               <span class="order-form__name-form-text">Отчество:</span>
-              <input class="order-form__patronyname" type="text" name="patronyname" placeholder="Отчество, если желаете">
+              <input class="order-form__name-input" type="text" name="patronyname" placeholder="Отчество, если желаете">
             </label>
           </fieldset> <!--Закрытие формы "ФИО" -->
 
@@ -118,18 +118,18 @@
           <fieldset class="order-form__phone-form">
             <legend class="order-form__phone-form-title">ТЕЛ</legend>
 
-            <label class="order-form__phone_label">
-              <input class="order-form__phone" type="text" name="phone" placeholder="+7 XXX XX XX*">
+            <label class="order-form__phone">
+              <input class="order-form__phone-input" type="text" name="phone" placeholder="+7 XXX XX XX*">
             </label>
 
           </fieldset> <!--Закрытие формы "ТЕЛ" -->
 
           <!-- форма "E-MAIL" -->
           <fieldset class="order-form__email-form">
-            <legend class="order-form__email-form-title">ТЕЛ</legend>
+            <legend class="order-form__email-form-title">E-mail</legend>
 
-            <label class="order-form__email_label">
-              <input class="order-form__email" type="text" name="email" placeholder="Ваш Email*">
+            <label class="order-form__email">
+              <input class="order-form__email-input" type="text" name="email" placeholder="Ваш Email*">
             </label>
 
           </fieldset> <!--Закрытие формы "E-MAIL" -->
@@ -138,51 +138,50 @@
           <fieldset class="order-form__additional-form">
             <legend class="order-form__additional-form-title">ДОП</legend>
 
-            <label class="order-form__additional_label">
-              <textarea class="order-form__textarea-additional" type="text" name="usercomment" rows="9">Опишите все ваши пожелания к заказу</textarea>
+            <label class="order-form__additional">
+              <textarea class="order-form__additional-textarea" name="usercomment" rows="8">Опишите все ваши пожелания к заказу</textarea>
             </label>
 
           </fieldset> <!--Закрытие формы "ДОП" -->
 
           <!-- комментарий к форме заказа -->
-          <div class="order-form__head">
+          <div class="order-form__comment_wrapper">
             <p class="order-form__comment">*Поля обязательны для заполнения</p>
           </div>
 
-          <!-- комментарий к форме заказа -->
-          <div class="order-form__head">
-            <button class="order-form__btn" type="submit">Отправить заказ</button>
+          <!-- кнопка отправки формы -->
+          <div class="order-form__btn-wrapper">
+            <button class="btn-block order-form__btn" type="submit">Отправить заказ</button>
           </div>
 
         </form>
 
     </main>
 
-  <!-- Подвал footer - основной подвал сайта + класс main_footer -->
-  <footer class="main-footer">
-    <div class="container clearfix"> <!--div-Центровщик содержимого подвала container -->
+  <!-- Подвал footer - основной подвал сайта + класс page_footer -->
+  <!-- 4. Подвал footer - основной подвал сайта + класс page_footer -->
+  <footer class="page-footer page-footer--mishka-form container">
 
       <!--Ссылки на соцсети -->
       <div class="social">
-        <!--Пиктограмма - фон. Текст будет скрыт css -->
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <div class="social__wrapper">
+          <a class="btn-inline-block social__btn social-btn--vk" href="#">Вконтакте</a>
+          <a class="btn-inline-block social__btn social-btn--fb" href="#">Фейсбук</a>
+          <a class="btn-inline-block social__btn social-btn--inst" href="#">Инстаграм</a>
+        </div>
       </div> <!--Закрытие социального блока подвала -->
 
       <!--Разработано -->
       <div class="copyrighter">
         <b class="copyrighter__text">Разработано</b>
-        <div class="copyrighter__container-logo">
-          <!--Пиктограмма - фон. Текст будет скрыт css -->
-          <a class="copyrighter__logo" href="#">htmlacademy</a>
 
+        <div class="copyrighter__container-logo">
+          <a class="copyrighter__btn copyrighter--logo" href="#">htmlacademy</a>
         </div> <!--Закрытие блока с логотипом -->
+
       </div> <!--Закрытие блока Разработано -->
 
-    </div> <!--Закрытие центровщика основного подвала container -->
-
-  </footer>
+    </footer>
 
   <!--Всплывающее PopUp-окно Меню -->
   <div class="modal-menu">

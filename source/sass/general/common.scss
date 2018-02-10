@@ -1,0 +1,83 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;  // обязательное требование. чтобы не проиходило обрезание фона  */
+  margin: 0;
+
+  font-weight: 400; // преобладающие глобальные текстовые стили всей страницы (который чаще всего встречается на странице) */
+  font-style: normal;
+  font-size: 15px;    // преобладающие глобальные текстовые стили всей страницы (который чаще всего встречается на странице)  */
+  line-height: 24px; // преобладающие глобальные текстовые стили всей страницы (который чаще всего встречается на странице) */
+  font-family: $font, "Arial", sans-serif;
+  color: #000000;
+
+  background-color: #ffffff;
+  //background-color: green;
+}
+
+main {
+  width: 320px;
+  margin: auto;
+
+  color: #000000;
+
+  background-color: #ffffff;
+  //background-color: cyan;
+}
+
+
+.container {
+  width: 260px;
+  min-height: 80px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  //background-color: green;
+}
+
+h1 {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  overflow: hidden;
+  color: #000000;
+}
+
+h2 {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  overflow: hidden;
+  color: #000000;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  overflow: hidden;
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

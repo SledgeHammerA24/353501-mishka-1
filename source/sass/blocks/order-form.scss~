@@ -1,0 +1,762 @@
+.order-form {
+  display: block;
+  width: 320px;
+  min-height: 20px;
+  margin: 0 auto;
+
+
+  //background-color: red;
+}
+
+.order-form__header-wrapper {
+  display: block;
+  width: 320px;
+  min-height: 20px;
+  margin: 0 auto;
+}
+
+.order-form__title {
+  padding-top: 70px;
+  padding-bottom: 50px;
+
+  line-height: 31px;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #000000;
+
+  background-color: #f1f1f1;
+}
+
+.order-form__title-text {
+  padding-top: 34px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #444444;
+
+  background-color: #ffffff;
+}
+
+.order-form fieldset {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+  text-decoration: none;
+
+  border: none;
+}
+
+.order-form legend {
+  padding: 0;
+  margin: 0;
+
+  text-decoration: none;
+}
+
+.order-form__type-form {
+  display: block;
+  width: 200px;
+  min-height: 60px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  //margin-top: 50px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: blue;
+}
+
+.order-form__type-form-title {
+  display: block;
+  width: 50px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #63d1bb;
+}
+
+.order-form__radio {
+  position: relative;
+
+  display: block;
+  width: 260px;
+  min-height: 60px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: green;
+
+  cursor: pointer;
+}
+
+.order-form__radio:nth-of-type(2) {
+  margin-top: 0;
+  background-color: gold;
+}
+
+.order-form__type-text {
+  display: inline-block;
+  width: 180px;
+  min-height: 30px;
+  margin-left: 65px;
+  margin-top: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  vertical-align: middle;
+  //text-transform: uppercase;
+  letter-spacing: 0.03em;
+  overflow: hidden;
+  color: #000000;
+
+  background-color: pink;
+}
+
+.order-form__radio:nth-of-type(2) .order-form__type-text {
+  margin-top: 13px;
+}
+
+// Делаем Декоративный круглый чекбокс с голочкой */
+
+// Дальше пошла жара. Прячем истинный чекбокс */
+.order-form__radio input[type="radio"] {
+  display: none; // - так прятать плохой вариант. в некоторых броузерах глючит */
+}
+
+// Дальше рисуем круг через квадратик в span */
+// можно обойтись и без input. Он добавлен для большей строгости */
+// "+" означает что pattern_checkbox_indicator должен идти сразу за input */
+// просто сделан более строгий селектор */
+// этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
+.order-form__radio input[type="radio"] + 
+.order-form__checkbox-indicator {
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  width: 35px;
+  height: 35px;
+  border: 2px solid #676767; // толщина квадратика, будущего кружка */
+  border-radius: 50%; // скругление полей ввода */
+
+  background: #ffffff; // цвет сердцевинки */
+}
+
+// Дальше рисуем сердцевину в виде кружка через квадрат */
+// только рисуется разумеется псевдоэлементом */
+// за вот этим строгим индикатором */
+// единственное добавляем условие(усложняем) - при состоянии checked для реального поля ввода */
+// Создаём псевдоэлемент - прямоугольничек и скругляем его */
+.order-form__radio input[type="radio"]:checked + 
+.order-form__checkbox-indicator::before {
+
+  content: "";
+
+  position: absolute;
+  top: 10px; // позиционирование крестика внутри своего родителя */
+  left: 10px;
+
+  width: 15px;
+  height: 15px;
+
+  background-color: #62d1ba;
+  border-radius: 50%;
+}
+
+// Подсветки */
+
+// Подсветка (любого) поля (круга (без текста)) */
+.pattern_form_radio input[type="radio"]:hover + 
+.pattern_checkbox_indicator {
+  border-color: #4d4d4d;
+}
+
+// disabled (любого) поля (круга (без текста)) */
+.pattern_form_radio input[type="radio"]:disabled + 
+.pattern_checkbox_indicator {
+  border-color: #ededed;
+}
+
+// Подсветка чекнутого поля (псевдоэлемента - сердцевины "точки") */
+.pattern_form_radio:hover input[type="radio"]:checked + 
+.pattern_checkbox_indicator::before {
+  background-color: #4d4d4d;
+}
+
+// disabled чекнутого поля (псевдоэлемента - сердцевины "точки") */
+.pattern_form_radio input[type="radio"]:checked:disabled + 
+.pattern_checkbox_indicator::before {
+  background-color: #ededed;
+}
+
+// текст радиобаттона при подсветке */
+.pattern_form_text:hover {
+  color: #000000; // меняем текст при наведении */
+}
+
+// текст радиобаттона при :disabled */
+.pattern_form_radio input[type="radio"]:disabled + 
+.pattern_checkbox_indicator + .pattern_form_text {
+  color: #bec1c2; // меняем текст при :disabled */
+}
+
+.order-form__checkbox_form {
+  width: 200px;
+  min-height: 60px;
+  //padding: 0;
+  //margin: 0;
+  //padding-top: 5px;
+  margin-top: 15px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: grey;
+}
+
+.order-form__checkbox-form-title {
+  display: block;
+  width: 50px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #63d1bb;
+}
+
+.order-form_checkbox {
+  position: relative;
+
+  display: block;
+  width: 200px;
+  min-height: 55px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  margin-top: 6px;
+  margin-bottom: 0;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: green;
+
+  cursor: pointer;
+}
+
+.order-form_checkbox:nth-of-type(1) {
+  margin-top: 10px;
+}
+
+.order-form__checkbox-text {
+  display: inline-block;
+  width: 120px;
+  min-height: 20px;
+  margin-left: 65px;
+  margin-top: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  //text-transform: uppercase;
+  letter-spacing: 0.03em;
+  overflow: hidden;
+  color: #000000;
+
+  background-color: pink;
+}
+
+// Делаем Декоративный круглый чекбокс с голочкой */
+
+// Дальше пошла жара. Прячем истинный чекбокс */
+.order-form_checkbox input[type="checkbox"] {
+  display: none; // - так прятать плохой вариант. в некоторых броузерах глючит */
+}
+
+// Дальше рисуем квадратик в span */
+// можно обойтись и без input. Он добавлен для большей строгости */
+// "+" означает что pattern_checkbox_indicator должен идти сразу за input */
+// просто сделан более строгий селектор */
+// этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
+.order-form_checkbox input[type="checkbox"] + 
+.order-form__checkbox-indicator {
+  position: absolute;
+  top: 6px;
+  left: 0;
+
+  width: 38px;
+  height: 38px;
+  border: 2px solid #444444; // толщина квадратика, будущего кружка */
+  border-radius: 1px; // скругление квадратика */
+
+  background: #ffffff; // цвет сердцевинки */
+}
+
+// Дальше рисуем сердцевину в виде кружка через квадрат */
+// только рисуется разумеется псевдоэлементом */
+// за вот этим строгим индикатором */
+// единственное добавляем условие(усложняем) - при состоянии checked для реального поля ввода */
+// Создаём псевдоэлемент - прямоугольничек и скругляем его */
+.order-form_checkbox input[type="checkbox"]:checked + 
+.order-form__checkbox-indicator::before {
+
+  content: "";
+
+  position: absolute;
+  top: 5px; // позиционирование крестика внутри своего родителя */
+  left: 2px;
+
+  width: 32px;
+  height: 25px;
+
+  background-image: url("../img/icon-tick.svg"); // само помещение спрайта в окошко(или кнопку)*/
+  background-repeat: no-repeat;
+  background-color: gold;
+}
+
+// Подсветки */
+
+// Подсветка (любого) поля (круга (без текста)) */
+//.pattern_form_radio input[type="radio"]:hover +
+//.pattern_checkbox_indicator {
+//  border-color: #4d4d4d;
+//}
+
+// disabled (любого) поля (круга (без текста)) */
+//.pattern_form_radio input[type="radio"]:disabled + 
+//.pattern_checkbox_indicator {
+//  border-color: #ededed;
+//}
+
+// Подсветка чекнутого поля (псевдоэлемента - сердцевины "точки") */
+//.pattern_form_radio:hover input[type="radio"]:checked + 
+//.pattern_checkbox_indicator::before {
+//  background-color: #4d4d4d;
+//}
+
+// disabled чекнутого поля (псевдоэлемента - сердцевины "точки") */
+//.pattern_form_radio input[type="radio"]:checked:disabled + 
+//.pattern_checkbox_indicator::before {
+//  background-color: #ededed;
+//}
+
+// текст радиобаттона при подсветке */
+//.pattern_form_text:hover {
+//  color: #000000; // меняем текст при наведении */
+//}
+
+// текст радиобаттона при :disabled */
+//.pattern_form_radio input[type="radio"]:disabled +
+//.pattern_checkbox_indicator + .pattern_form_text
+// {
+//  color: #bec1c2; // меняем текст при :disabled */
+//}
+
+//  форма ФИО
+
+.order-form__name-form {
+  display: block;
+  width: 200px;
+  min-height: 60px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  margin-top: 15px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: blue;
+}
+
+.order-form__name-form-title {
+  display: block;
+  width: 50px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #63d1bb;
+}
+
+.order-form__name-form-text {
+  display: block;
+  width: 100px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  //text-transform: uppercase;
+  letter-spacing: 0.065em;
+  overflow: hidden;
+  color: #000000;
+}
+
+.order-form__name {
+  display: block;
+  width: 260px;
+  min-height: 65px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  margin-top: 25px;
+  margin-bottom: 0;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: green;
+}
+
+.order-form__name:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.order-form__name:nth-of-type(3) {
+  margin-top: 15px;
+}
+
+.order-form__name input[type="text"] {
+  width: 260px;
+  height: 31px;
+  margin-top: 17px;
+}
+
+.order-form__name input::placeholder {
+  color: #c7c7c7;
+}
+
+.order-form__name input {
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.order-form__name input:hover {
+  border-bottom: 2px solid #62d1ba;
+}
+
+.order-form__name input:focus {
+  border-bottom: 2px solid #62d1ba;
+}
+
+//  форма TEL
+
+.order-form__phone-form {
+  display: block;
+  width: 200px;
+  min-height: 40px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  margin-top: 33px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: blue;
+}
+
+.order-form__phone-form-title {
+  display: block;
+  width: 50px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #63d1bb;
+}
+
+.order-form__phone {
+  display: block;
+  width: 260px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: green;
+}
+
+.order-form__phone input[type="text"] {
+  width: 260px;
+  height: 31px;
+  margin-top: 5px;
+}
+
+.order-form__phone input::placeholder {
+  color: #c7c7c7;
+}
+
+.order-form__phone input {
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.order-form__phone input:hover {
+  border-bottom: 2px solid #62d1ba;
+}
+
+.order-form__phone input:focus {
+  border-bottom: 2px solid #62d1ba;
+}
+
+//  форма E-MAIL
+
+.order-form__email-form {
+  display: block;
+  width: 200px;
+  min-height: 40px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  margin-top: 35px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: blue;
+}
+
+.order-form__email-form-title {
+  display: block;
+  width: 80px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #63d1bb;
+}
+
+.order-form__email {
+  display: block;
+  width: 260px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  margin-top: 12px;
+  margin-bottom: 0;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: green;
+}
+
+.order-form__email input[type="text"] {
+  width: 260px;
+  height: 31px;
+  margin-top: 5px;
+}
+
+.order-form__email input::placeholder {
+  color: #c7c7c7;
+}
+
+.order-form__email input {
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.order-form__email input:hover {
+  border-bottom: 2px solid #62d1ba;
+}
+
+.order-form__email input:focus {
+  border-bottom: 2px solid #62d1ba;
+}
+
+
+//  форма ДОП
+
+.order-form__additional-form {
+  display: block;
+  width: 200px;
+  min-height: 40px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  margin-top: 33px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: blue;
+}
+
+.order-form__additional-form-title {
+  display: block;
+  width: 50px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #63d1bb;
+}
+
+.order-form__additional {
+  display: block;
+  width: 260px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  margin-top: 12px;
+  margin-bottom: 0;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: green;
+}
+
+.order-form__additional textarea {
+  width: 252px;
+  min-height: 31px;
+  margin-top: 5px;
+
+  color: #dfdfdf;
+
+  border: 2px solid #444444;
+}
+
+.order-form__additional textarea:hover {
+  color: #c7c7c7;
+
+  border: 2px solid #62d1ba;
+}
+
+.order-form__additional textarea:focus {
+  color: #444444;
+
+  border: 2px solid #62d1ba;
+}
+
+//  комментарий к форме заказа
+
+.order-form__comment_wrapper {
+  display: block;
+  width: 260px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0;
+  //padding-top: 5px;
+  margin-top: 6px;
+  //margin-bottom: 27px;
+
+  text-decoration: none;
+
+  //background-color: #ffffff;
+  background-color: blue;
+}
+
+
+.order-form__comment_wrapper p {
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.order-form__comment {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  //text-transform: uppercase;
+  letter-spacing: 0.035em;
+  overflow: hidden;
+  color: #444444;
+}
+
+//  кнопка отправки формы
+
+.order-form__btn-wrapper {
+  width: 260px;
+  min-height: 80px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+// Кнопка на всю ширину контейнера */
+
+.order-form__btn {
+  display: block;
+  width: 260px;
+  min-height: 18px;
+  padding: 15px 0; // центровка маргином. фикс паддинг убираем */
+  margin: 0 auto; // центруем маргином */
+  //margin-top: 20px; // отталкиваемся от верхнего коноейнера */
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  //font-size: 0px;
+  line-height: 18px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  text-align: center;
+  color: #444444;
+
+  background-color: #ffffff;
+  border: 2px solid #444444;
+}
