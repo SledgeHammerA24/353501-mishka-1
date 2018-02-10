@@ -153,7 +153,7 @@
 // "+" означает что pattern_checkbox_indicator должен идти сразу за input */
 // просто сделан более строгий селектор */
 // этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
-.order-form__radio input[type="radio"] + 
+.order-form__radio input[type="radio"] +
 .order-form__checkbox-indicator {
   position: absolute;
   top: 11px;
