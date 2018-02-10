@@ -381,7 +381,7 @@
 // текст радиобаттона при :disabled */
 .pattern_form_radio input[type="radio"]:disabled +
 .pattern_checkbox_indicator + .pattern_form_text
- {
+  {
   color: #bec1c2; // меняем текст при :disabled */
 }
 
