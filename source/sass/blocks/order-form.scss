@@ -222,7 +222,7 @@
 // текст радиобаттона при :disabled */
 .pattern_form_radio input[type="radio"]:disabled +
 .pattern_checkbox_indicator + .pattern_form_text
-  {
+ {
   color: #bec1c2; // меняем текст при :disabled */
 }
 
@@ -350,40 +350,40 @@
 // Подсветки */
 
 // Подсветка (любого) поля (круга (без текста)) */
-.pattern_form_radio input[type="radio"]:hover +
-.pattern_checkbox_indicator {
-  border-color: #4d4d4d;
-}
+//.pattern_form_radio input[type="radio"]:hover +
+//.pattern_checkbox_indicator {
+//  border-color: #4d4d4d;
+//}
 
 // disabled (любого) поля (круга (без текста)) */
-.pattern_form_radio input[type="radio"]:disabled +
-.pattern_checkbox_indicator {
-  border-color: #ededed;
-}
+//.pattern_form_radio input[type="radio"]:disabled +
+//.pattern_checkbox_indicator {
+//  border-color: #ededed;
+//}
 
 // Подсветка чекнутого поля (псевдоэлемента - сердцевины "точки") */
-.pattern_form_radio:hover input[type="radio"]:checked +
-.pattern_checkbox_indicator::before {
-  background-color: #4d4d4d;
-}
+//.pattern_form_radio:hover input[type="radio"]:checked +
+//.pattern_checkbox_indicator::before {
+//  background-color: #4d4d4d;
+//}
 
 // disabled чекнутого поля (псевдоэлемента - сердцевины "точки") */
-.pattern_form_radio input[type="radio"]:checked:disabled +
-.pattern_checkbox_indicator::before {
-  background-color: #ededed;
-}
+//.pattern_form_radio input[type="radio"]:checked:disabled +
+//.pattern_checkbox_indicator::before {
+//  background-color: #ededed;
+//}
 
 // текст радиобаттона при подсветке */
-.pattern_form_text:hover {
-  color: #000000; // меняем текст при наведении */
-}
+//.pattern_form_text:hover {
+//  color: #000000; // меняем текст при наведении */
+//}
 
 // текст радиобаттона при :disabled */
-.pattern_form_radio input[type="radio"]:disabled +
-.pattern_checkbox_indicator + .pattern_form_text
-  {
-  color: #bec1c2; // меняем текст при :disabled */
-}
+//.pattern_form_radio input[type="radio"]:disabled +
+//.pattern_checkbox_indicator + .pattern_form_text
+// {
+//  color: #bec1c2; // меняем текст при :disabled */
+//}
 
   //  форма ФИО
 
@@ -439,7 +439,7 @@
   margin: 0;
   padding-top: 5px;
   margin-top: 25px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   text-decoration: none;
 
@@ -518,7 +518,7 @@
   margin: 0;
   padding-top: 5px;
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   text-decoration: none;
 
@@ -589,7 +589,7 @@
   margin: 0;
   padding-top: 5px;
   margin-top: 12px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   text-decoration: none;
 
@@ -661,7 +661,7 @@
   margin: 0;
   padding-top: 5px;
   margin-top: 12px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   text-decoration: none;
 
@@ -727,8 +727,6 @@
   color: #444444;
 }
 
-
-
 //  кнопка отправки формы
 
 .order-form__btn-wrapper {
@@ -755,7 +753,7 @@
   //font-size: 0px;
   line-height: 18px;
   text-decoration: none;
-  letter-spacing: 0.020em;
+  letter-spacing: 0.02em;
   vertical-align: middle;
   text-align: center;
   color: #444444;
