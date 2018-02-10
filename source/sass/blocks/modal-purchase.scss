@@ -237,7 +237,7 @@
 }
 
 // чекнутое поле */
-.modal-purchase__item-size input[type="radio"]:checked + 
+.modal-purchase__item-size input[type="radio"]:checked +
 .modal-purchase__checkbox-indicator {
   border-color: #62d1ba;
 }
