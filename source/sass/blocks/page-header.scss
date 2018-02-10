@@ -66,8 +66,7 @@
   flex-shrink: 0;
 
   //background-color: pink;
-
-  }
+}
 
 .page-header__nav-container a {
   display: block;   // делаем ссылку блоками
@@ -88,16 +87,14 @@
   font-size: 0;
 
   //background-color: red;
-
-
 }
 
 .page-header__menu-button-toggle::before {
   content: ""; // - обязательно, чтобы он отрисовался */
 
   position: absolute;
-  top: 0px; // привязка псевдоэлемента в родительском контейнере*/
-  left: 0px; // привязка псевдоэлемента в родительском контейнере*/
+  top: 0; // привязка псевдоэлемента в родительском контейнере*/
+  left: 0; // привязка псевдоэлемента в родительском контейнере*/
 
   display: inline-block;
   width: 22px;
@@ -106,8 +103,6 @@
   background-image: url("../img/icon-menu-open.svg"); // само помещение спрайта в окошко(или кнопку)*/
   background-repeat: no-repeat;
 }
-
-
 
 // подсветка при наведении */
 .page-header__menu-button-toggle::before:hover {

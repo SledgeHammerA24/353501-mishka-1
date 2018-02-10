@@ -59,7 +59,7 @@
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
-  letter-spacing: 0.050em;
+  letter-spacing: 0.05em;
   text-align: left;
   color: #000000;
 }
@@ -102,8 +102,7 @@
   height: 26px;
   padding: 11px 39px;
 
-
-  font-size: 0px;
+  font-size: 0;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -112,10 +111,7 @@
   border: 1px solid #444444;
 }
 
-
-
 .response__btn-write-us {
-
   width: 256px;
   height: 30px;
   margin: 0 auto;

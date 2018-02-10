@@ -204,14 +204,14 @@
 
 // Подсветка чекнутого поля (псевдоэлемента - сердцевины "точки") */
 .pattern_form_radio:hover input[type="radio"]:checked +
-    .pattern_checkbox_indicator::before {
-      background-color: #4d4d4d;
+.pattern_checkbox_indicator::before {
+  background-color: #4d4d4d;
 }
 
 // disabled чекнутого поля (псевдоэлемента - сердцевины "точки") */
 .pattern_form_radio input[type="radio"]:checked:disabled +
-    .pattern_checkbox_indicator::before {
-      background-color: #ededed;
+.pattern_checkbox_indicator::before {
+  background-color: #ededed;
 }
 
 // текст радиобаттона при подсветке */
@@ -221,13 +221,10 @@
 
 // текст радиобаттона при :disabled */
 .pattern_form_radio input[type="radio"]:disabled +
-  .pattern_checkbox_indicator + .pattern_form_text
-{
-    color: #bec1c2; // меняем текст при :disabled */
+.pattern_checkbox_indicator + .pattern_form_text
+ {
+  color: #bec1c2; // меняем текст при :disabled */
 }
-
-
-
 
 .order-form__checkbox_form {
   width: 200px;
@@ -242,8 +239,6 @@
 
   //background-color: #ffffff;
   background-color: grey;
-
-
 }
 
 .order-form__checkbox-form-title {
@@ -270,7 +265,7 @@
   margin: 0;
   //padding-top: 5px;
   margin-top: 6px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   text-decoration: none;
 
@@ -297,14 +292,12 @@
   line-height: 18px;
   vertical-align: middle;
   //text-transform: uppercase;
-  letter-spacing: 0.030em;
+  letter-spacing: 0.03em;
   overflow: hidden;
   color: #000000;
 
   background-color: pink;
 }
-
-
 
 // Делаем Декоративный круглый чекбокс с голочкой */
 
@@ -318,18 +311,18 @@
 // "+" означает что pattern_checkbox_indicator должен идти сразу за input */
 // просто сделан более строгий селектор */
 // этот квадратик (- так получается) будет отрисован неважно, есть голочка в input или нет */
-.order-form_checkbox input[type="checkbox"]+
-    .order-form__checkbox-indicator {
-      position: absolute;
-      top: 6px;
-      left: 0;
+.order-form_checkbox input[type="checkbox"] +
+.order-form__checkbox-indicator {
+  position: absolute;
+  top: 6px;
+  left: 0;
 
-      width: 38px;
-      height: 38px;
-      border: 2px solid #444444; // толщина квадратика, будущего кружка */
-      border-radius: 1px; // скругление квадратика */
+  width: 38px;
+  height: 38px;
+  border: 2px solid #444444; // толщина квадратика, будущего кружка */
+  border-radius: 1px; // скругление квадратика */
 
-      background: #ffffff; // цвет сердцевинки */
+  background: #ffffff; // цвет сердцевинки */
 }
 
 // Дальше рисуем сердцевину в виде кружка через квадрат */
@@ -338,46 +331,46 @@
 // единственное добавляем условие(усложняем) - при состоянии checked для реального поля ввода */
 // Создаём псевдоэлемент - прямоугольничек и скругляем его */
 .order-form_checkbox input[type="checkbox"]:checked +
-    .order-form__checkbox-indicator::before {
+.order-form__checkbox-indicator::before {
 
-      content: "";
+  content: "";
 
-      position: absolute;
-      top: 5px; // позиционирование крестика внутри своего родителя */
-      left: 2px;
+  position: absolute;
+  top: 5px; // позиционирование крестика внутри своего родителя */
+  left: 2px;
 
-      width: 32px;
-      height: 25px;
+  width: 32px;
+  height: 25px;
 
-      background-image: url("../img/icon-tick.svg"); // само помещение спрайта в окошко(или кнопку)*/
-      background-repeat: no-repeat;
-      background-color: gold;
+  background-image: url("../img/icon-tick.svg"); // само помещение спрайта в окошко(или кнопку)*/
+  background-repeat: no-repeat;
+  background-color: gold;
 }
 
 // Подсветки */
 
 // Подсветка (любого) поля (круга (без текста)) */
 .pattern_form_radio input[type="radio"]:hover +
-    .pattern_checkbox_indicator {
-      border-color: #4d4d4d;
+.pattern_checkbox_indicator {
+  border-color: #4d4d4d;
 }
 
 // disabled (любого) поля (круга (без текста)) */
 .pattern_form_radio input[type="radio"]:disabled +
-    .pattern_checkbox_indicator {
-      border-color: #ededed;
+.pattern_checkbox_indicator {
+  border-color: #ededed;
 }
 
 // Подсветка чекнутого поля (псевдоэлемента - сердцевины "точки") */
 .pattern_form_radio:hover input[type="radio"]:checked +
-    .pattern_checkbox_indicator::before {
-      background-color: #4d4d4d;
+.pattern_checkbox_indicator::before {
+  background-color: #4d4d4d;
 }
 
 // disabled чекнутого поля (псевдоэлемента - сердцевины "точки") */
 .pattern_form_radio input[type="radio"]:checked:disabled +
-    .pattern_checkbox_indicator::before {
-      background-color: #ededed;
+.pattern_checkbox_indicator::before {
+  background-color: #ededed;
 }
 
 // текст радиобаттона при подсветке */
@@ -387,9 +380,9 @@
 
 // текст радиобаттона при :disabled */
 .pattern_form_radio input[type="radio"]:disabled +
-  .pattern_checkbox_indicator + .pattern_form_text
-{
-    color: #bec1c2; // меняем текст при :disabled */
+.pattern_checkbox_indicator + .pattern_form_text
+ {
+  color: #bec1c2; // меняем текст при :disabled */
 }
 
   //  форма ФИО

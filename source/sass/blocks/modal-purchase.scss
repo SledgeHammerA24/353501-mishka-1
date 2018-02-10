@@ -232,18 +232,15 @@
 
 // Подсветка (любого) поля (без текста) */
 .modal-purchase__item-size input[type="radio"]:hover +
-    .modal-purchase__checkbox-indicator {
-      border-color: #c7c7c7;
+.modal-purchase__checkbox-indicator {
+  border-color: #c7c7c7;
 }
 
 // чекнутое поле */
 .modal-purchase__item-size input[type="radio"]:checked +
-    .modal-purchase__checkbox-indicator {
-      border-color: #62d1ba;
+.modal-purchase__checkbox-indicator {
+  border-color: #62d1ba;
 }
-
-
-
 
 .modal-purchase__btn-wrapper {
   width: 260px;
@@ -251,7 +248,6 @@
   margin: 0 auto;
   margin-top: 12px;
 }
-
 
 // Кнопка на всю ширину контейнера */
 
