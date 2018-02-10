@@ -1,0 +1,141 @@
+
+.response {
+  width: 260px;
+  height: 630px;
+
+  background-color: grey;
+}
+
+.response__title {
+  padding-top: 7px;
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 0.045em;
+  color: #000000;
+}
+
+
+.response__post {
+  width: 260px;
+  height: 391px;
+
+  background-color: blue;
+}
+
+.response__content {
+  width: 260px;
+  height: 280px;
+
+  background-color: red;
+}
+
+.response__comment {
+  padding-top: 9px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px; // в "p" не работает */
+  line-height: 30px; // в "p" не работает */
+  letter-spacing: 0.03em; // в "p" не работает */
+  text-align: left;
+  color: #444444;
+}
+
+.response__header-wrapper {
+  display: block;
+  width: 260px;
+  height: 90px;
+}
+
+.response__author {
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: 0.050em;
+  text-align: left;
+  color: #000000;
+}
+
+.response__instagram {
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 0.035em;
+  color: #444444;
+}
+
+.response__instagram a {
+  display: block;   // делаем ссылку блоками */
+
+  text-decoration: none;
+  color: #000000;
+}
+
+
+.response a {
+  text-decoration: none;
+}
+
+.response__btn-wrapper {
+  width: 260px;
+}
+
+
+.response__btn-prev,
+.response__btn-next {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50px;
+  height: 26px;
+  padding: 11px 39px;
+
+
+  font-size: 0px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  color: #444444;
+
+  border: 1px solid #444444;
+}
+
+
+
+.response__btn-write-us {
+
+  width: 256px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 39px;
+  padding: 9px 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  //font-size: 0px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  color: #444444;
+
+  background-color: #ffffff;
+  border: 2px solid #444444;
+}
+
+.response__btn-write a {
+  text-decoration: none;
+}

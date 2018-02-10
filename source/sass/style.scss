@@ -1,0 +1,31 @@
+
+@import "general/normalize.scss";
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/common.scss";
+@import "general/fonts.scss";
+
+// Подключение типовых блоков
+@import "standard_blocks/page_buttons.scss";
+@import "standard_blocks/flex-block.scss";
+//@import "standard_blocks/flex--elem.scss";
+
+// Подключениеn контентных блоков INDEX
+@import "blocks/page-header.scss";
+@import "blocks/main-header.scss";
+@import "blocks/weeks-item.scss";
+@import "blocks/presentation.scss";
+@import "blocks/response.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyrighter.scss";
+
+@import "blocks/modal-purchase.scss";
+
+// Подключение контентных блоков страницы FORM
+@import "blocks/order-form.scss";
+
+// Подключение контентных блоков страницы Catalog
+@import "blocks/catalog.scss";
+@import "blocks/video-presentation.scss";

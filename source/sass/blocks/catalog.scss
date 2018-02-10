@@ -1,0 +1,203 @@
+.catalog {
+  display: block;
+  width: 320px;
+  min-height: 20px;
+  margin: 0 auto;
+
+  background-color: red;
+  }
+
+.catalog__header-wrapper {
+  display: block;
+  width: 320px;
+  min-height: 20px;
+  margin: 0 auto;
+  }
+
+.catalog__title {
+  padding-top: 70px;
+  padding-bottom: 77px;
+
+  font-size: 27px;
+  line-height: 30px;
+  letter-spacing: 0.055em;
+  overflow: hidden;
+  color: #000000;
+
+  background-color: #f1f1f1;
+}
+
+
+.catalog__wrapper {
+  width: 320px;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+//.catalog__item-wrapper article {
+  //margin: 0;
+  //padding: 0;
+//}
+
+.catalog__item-wrapper {
+  width: 258px;
+  height: 402px;
+  margin: 0 auto;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  border: 1px solid #ededed;
+}
+
+.catalog__item-wrapper:nth-of-type(3) {
+  height: 426px;
+}
+
+//
+.catalog__item-wrapper:nth-of-type(1) {
+//background-color: green;
+}
+//
+.catalog__item-wrapper:nth-of-type(2) {
+//background-color: grey;
+}
+//
+.catalog__item-wrapper:nth-of-type(3) {
+//background-color: pink;
+}
+
+.catalog__photo {
+  margin: 0 auto;
+  margin-top: 29px;
+
+  display: block;
+  width: 260px;
+  height: 195px;
+
+  background-color: blue;
+}
+
+// перестраховка. явное задание размеров картинки */
+.catalog__photo img {
+  width: 260px;
+  height: 195px;
+}
+
+.catalog__item-title {
+  margin: 0;
+  padding-top: 27px;
+  padding-left: 28px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.065em;
+  text-align: left;
+  overflow: hidden;
+  color: #000000;
+}
+
+.catalog__item-description {
+  margin: 0;
+  padding-top: 6px;
+  padding-bottom: 0;
+  padding-left: 28px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 0.035em;
+  text-align: left;
+  overflow: hidden;
+  color: #444444;
+}
+
+
+.catalog__purchase-wrapper {
+
+  width: 204px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 17px;
+
+  border-top: 1px solid #ececec;
+  background-color: gold;
+
+}
+
+.catalog__price p {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__price {
+
+  width: 80px;
+  height: 30px;
+  padding-top: 16px;
+  padding-bottom: 0;
+  margin: 0;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.045em;
+  text-align: left;
+  overflow: hidden;
+  color: #000000;
+}
+
+// Устройство кнопки (физические размеры, убирание текста) для социальных кнопок
+.catalog__busket-btn {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-size: 0;
+
+  //background-color: red;
+
+
+}
+
+.catalog__busket-btn::before {
+  content: ""; // - обязательно, чтобы он отрисовался */
+
+  position: absolute;
+  top: 8px; // привязка псевдоэлемента в родительском контейнере*/
+  left: 11px; // привязка псевдоэлемента в родительском контейнере*/
+
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+
+  background-image: url("../img/icon-cart.svg"); // само помещение спрайта в окошко(или кнопку)*/
+  background-repeat: no-repeat;
+}
+
+
+
+// подсветка при наведении */
+.catalog__busket-btn::before:hover {
+  color: red;
+
+  background: #eeeeee;
+  opacity: 0.3;
+}
+
+// подсветка при нажатии */
+.catalog__busket-btn a:active {
+  color: #b4b4b4;
+
+  background: #eeeeee;
+}

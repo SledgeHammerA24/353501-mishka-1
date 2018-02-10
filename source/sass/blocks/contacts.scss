@@ -1,0 +1,115 @@
+
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.contacts__title {
+  margin: 0;
+  padding-top: 41px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.040em;
+  color: #000000;
+}
+
+
+.contacts__properties-table {
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 12px;
+
+  //background-color: magenta;
+}
+
+
+.contacts__properties-table td {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 26px;
+  //padding: 0;  // имеет высший приоритет над свойствами строк и столбцов */
+  //padding-top: 36px;  // имеет высший приоритет над свойствами строк и столбцов */
+
+  //border: 1px solid black;
+}
+
+// задание свойств ячеек-заголовка */
+.contacts__properties-table th {
+  width: 73px;
+  height: 40px;
+  padding-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
+  vertical-align: top;
+  letter-spacing: normal;
+  color: #444444;
+
+  //background-color: blue;
+
+}
+
+// задание свойств ячеек */
+.contacts__table-cell {
+  width: 110px;
+
+  letter-spacing: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
+  vertical-align: top;
+
+  color: #444444;
+}
+
+.contacts__map-wrapper {
+  width: 322px;
+  height: 457px;
+  margin-top: 20px;
+
+  background-image: url("../img/map-mobile@1x.jpg"); // само помещение спрайта в окошко(или кнопку)*/
+  background-repeat: no-repeat;
+}
+
+.google-map {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.contacts__btn-wrapper {
+  display: block;
+}
+
+// Кнопка на всю ширину контейнера */
+
+.contacts__btn {
+  width: 256px;
+  height: 20px;
+  padding: 14px 0; // центровка маргином. фикс паддинг убираем */
+  margin: 0 auto; // центруем маргином */
+  margin-top: 37px; // отталкиваемся от верхнего контейнера */
+
+  font-weight: 700;
+  font-size: 18px;
+  //font-size: 0px;*/
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  color: #444444;
+
+  border: 2px solid #444444;
+}
