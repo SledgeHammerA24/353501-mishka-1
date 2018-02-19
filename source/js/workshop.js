@@ -12,7 +12,7 @@ var popup_username_storage = localStorage.getItem("name"); // вытаскива
 var popup_usermail_storage = localStorage.getItem("mail"); // вытаскиваем информацию из локалстораджа в переменную popup_usermail_storage - было ли запомнено последний введённый успешно e-mail
 
 // переменные. попапа. фокус на поле ввода
- var popup_form_required = popup.querySelector("form"); // переменной popupform_required присваиваем первый элемент в popup(то бишь в div'е с классом .modal_content) - то бишь это форма ввода целиком
+var popup_form_required = popup.querySelector("form"); // переменной popupform_required присваиваем первый элемент в popup(то бишь в div'е с классом .modal_content) - то бишь это форма ввода целиком
 
 //иные переменные
 var total=17;
@@ -21,19 +21,19 @@ var sure = popup.querySelector(".input_form_name");
 
 // показ модального окошка при нажатии на Корзину
 button_writeus.addEventListener("click", function(event) { // button_writeus - ЭЛЕМЕНТ, у которого будем ловить событие, "click" - само событие,
- event.preventDefault(); // отменяем действие по умолчанию - переход по ссылке у ссылки на другую страницу
- console.log("показ окошка"); // вывод в консоль сообщения при событии "click"
- popup.classList.add("modal_content_show"); // добавляем второй класс (modal_content_show) к popup - то бишь показываем скрытое окошко
- popup_overlay.classList.add("modal_overlay_show"); // добавляем второй класс (modal_overlay_show) к overlay - то бишь показываем overlay
-   if (popup_username_storage) {
-   popup_form_username.value=popup_username_storage;
-   popup_form_email.focus();
- } else {
-   popup_form_username.focus();
- }
- if (popup_usermail_storage) {
- popup_form_email.value=popup_usermail_storage;
- }
+event.preventDefault(); // отменяем действие по умолчанию - переход по ссылке у ссылки на другую страницу
+console.log("показ окошка"); // вывод в консоль сообщения при событии "click"
+popup.classList.add("modal_content_show"); // добавляем второй класс (modal_content_show) к popup - то бишь показываем скрытое окошко
+popup_overlay.classList.add("modal_overlay_show"); // добавляем второй класс (modal_overlay_show) к overlay - то бишь показываем overlay
+    if (popup_username_storage) {
+    popup_form_username.value=popup_username_storage;
+    popup_form_email.focus();
+  } else {
+    popup_form_username.focus();
+  }
+  if (popup_usermail_storage) {
+  popup_form_email.value=popup_usermail_storage;
+  }
 });
 
 // закрытие модального окошка при нажатии на закрывающий крестик - переменная cross_close
@@ -50,11 +50,11 @@ popup.classList.remove("modal_error"); // убираем второй класс
 
 window.addEventListener("keydown", function(event) { // window - ЭЛЕМЕНТ, у которого будем ловить событие, "keydown" - само событие,
 if (event.keyCode===27) {
- if (popup.classList.contains("modal_content_show")) {
-   popup.classList.remove("modal_content_show"); // убираем второй класс (modal_content_show) у popup(если он есть) - то бишь скрываем окошко попаапа
-   popup_overlay.classList.remove("modal_overlay_show"); // убираем второй класс (modal_overlay_show) у overlay (если он есть) - то бишь скрываем окошко overlay
-   popup.classList.remove("modal_error"); // убираем второй класс (modal_error) к popup - тряску окошком при неправильном вводе
- }
+  if (popup.classList.contains("modal_content_show")) {
+    popup.classList.remove("modal_content_show"); // убираем второй класс (modal_content_show) у popup(если он есть) - то бишь скрываем окошко попаапа
+    popup_overlay.classList.remove("modal_overlay_show"); // убираем второй класс (modal_overlay_show) у overlay (если он есть) - то бишь скрываем окошко overlay
+    popup.classList.remove("modal_error"); // убираем второй класс (modal_error) к popup - тряску окошком при неправильном вводе
+  }
 }
 
 });
@@ -62,13 +62,13 @@ if (event.keyCode===27) {
 
 // проверка полей формы при отправке
 popup_form_required.addEventListener("submit", function(event) { // popup_form_required - ЭЛЕМЕНТ, у которого будем ловить событие, "submit" - само событие,
- if (!popup_form_username.value || !popup_form_email.value) {
-   event.preventDefault();
-   popup.classList.add("modal_error"); // добавляем второй класс (modal_error) к popup - то бишь трясём окошком при неправильном вводе
+  if (!popup_form_username.value || !popup_form_email.value) {
+    event.preventDefault();
+    popup.classList.add("modal_error"); // добавляем второй класс (modal_error) к popup - то бишь трясём окошком при неправильном вводе
 
- } else {
-   localStorage.setItem("name", popup_form_username.value); // при успешной отправке формы запоминаем введённый логин (сохраняем в localStorage) в переменную name
-   localStorage.setItem("mail", popup_form_email.value); // при успешной отправке формы запоминаем введённый e-mail (сохраняем в localStorage) в переменную mail
-   popup.classList.remove("modal_error"); // убираем второй класс (modal_error) к popup - тряску окошком при неправильном вводе
- }
+  } else {
+    localStorage.setItem("name", popup_form_username.value); // при успешной отправке формы запоминаем введённый логин (сохраняем в localStorage) в переменную name
+    localStorage.setItem("mail", popup_form_email.value); // при успешной отправке формы запоминаем введённый e-mail (сохраняем в localStorage) в переменную mail
+    popup.classList.remove("modal_error"); // убираем второй класс (modal_error) к popup - тряску окошком при неправильном вводе
+  }
 });
