@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link href="<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> <!-- подключение шрифтов. обязательно до ВСЕХ стилей -->
+    <!--<link href="<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">--> <!-- подключение шрифтов. обязательно до ВСЕХ стилей -->
     <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,21 +10,84 @@
   <body>
 
     <!-- 1. Заголовок header (основная шапка сайта) -->
+    <!-- Шапка-навигация из 6 элементов   -->
+    <!-- 1 - логотип, 2-4 меню, 5 - текст, 6 - кнопка моб.версии -->
+
     <header class="page-header">
-      <div class="page-header__wrapper flex-block container">
 
-      <!-- 1.1 Логотип -->
-      <div class="page-header__logo-wrapper">
-        <img class="page-header__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
-      </div> <!--Закрытие Логотипа -->
+      <nav>
+      <div class="page-header__wrapper flex-block flex-block--direction-column page-header__mobile-menu--closed page-header--nojs">
 
-      <!-- 1.2 Кнопка меню -->
-      <nav class="page-header__nav-container">
-        <a class="page-header__menu-button-toggle" href="#">Открыть меню</a>
-      </nav> <!--Закрытие кнопки меню -->
+        <!-- 1.1 Логотип с кнопкой меню-->
+        <div class="page-header__logo-wrapper">
+          <img class="page-header__logo" src="img/logo-mobile.svg" width="86" height="35"alt="Логотип Мишка">
+          <!-- 1.2 Кнопка меню -->
+          <div class="page-header__toggle--closed page-header__toggle--disabled"> <!-- Обёртка для переключения состояний кнопки в css за каскадом -->
+            <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+          </div>
+        </div> <!--Закрытие Логотипа -->
+
+
+
+        <!-- 1.3 Главное меню -->
+        <div class="page-header__menu-wrapper">
+          <ul class="page-header__menu flex-block flex-block--direction-column">
+            <li class="page-header__menu-item">
+              <a class="page-header__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a class="page-header__link page-header__link--order" href=form.html>Вязание на заказ</a>
+            </li>
+          </ul>
+        </div> <!--Закрытие главного меню -->
+
+        <!-- 1.4 Пользовательское меню -->
+        <div class="page-header__user-menu-wrapper">
+          <ul class="page-header__user-menu flex-block flex-block--direction-column">
+            <li class="page-header__user-menu-item main-header__user-menu-item--search">
+              <svg class="page-header__user-menu-icon main-header__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6"
+              xml:space="preserve">
+              <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"
+              />
+              </svg>
+              <a class="page-header__user-menu-link page-header__user-menu-link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="page-header__user-menu-item main-header__user-menu-item--cart">
+              <svg class="page-header__user-menu-icon main-header__icon--cart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
+              xml:space="preserve">
+              <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"
+              />
+              </svg>
+              <a class="page-header__user-menu-link page-header__user-menu-link--cart" href="#">Корзина: <span>пока пуста</span></a>
+            </li>
+          </ul>
+        </div> <!--Закрытие пользовательского меню -->
+
+        <!-- 1.5 меню продаж -->
+        <div class="page-header__sale-menu-wrapper">
+          <ul class="page-header__sale-menu flex-block">
+            <li class="page-header__sale-menu-item">
+              <a class="page-header__sale-menu-link page-header__sale-menu--new" href="#">Новые поступления</a>
+            </li>
+            <li class="page-header__sale-menu-item">
+              <a class="page-header__sale-menu-link" href="#">Распродажа</a>
+            </li>
+          </ul>
+        </div> <!--Закрытие меню продаж -->
+
+        <!-- 1.6 Информация -->
+        <div class="page-header__info-wrapper">
+          <p class="page-header__info">Бесплатная доставка по России</p>
+        </div> <!--Закрытие кнопки меню -->
 
       </div> <!--Закрытие центровщика шапки container -->
+
+      </nav>
     </header> <!--Закрытие шапки сайта -->
+
+
 
     <!-- 2. Раздел main - уникальное содержание страницы -->
     <main>
@@ -46,8 +109,12 @@
 
         <nav class="main-header__navigation-list">
           <ul>
-            <li class="main-header__list-item main-header__list-item--interior"><a href="#">Предметы интерьера</a></li>
-            <li class="main-header__list-item main-header__list-item--toy"><a href="#">Детские игрушки</a></li>
+            <li class="main-header__list-item main-header__list-item--interior">
+              <a href="#">Предметы интерьера</a>
+            </li>
+            <li class="main-header__list-item main-header__list-item--toy">
+              <a href="#">Детские игрушки</a>
+            </li>
           </ul>
         </nav> <!--Закрытие Меню -->
 
@@ -211,33 +278,6 @@
 
       </footer>
 
-    <!--Всплывающее PopUp-окно Меню -->
-    <div class="modal-menu">
-      <header class="modal-menu__header">
-        <div class="modal-menu-layout container"> <!--div-Центровщик содержимого шапки container -->
-
-        <!-- 1.1 Логотип -->
-        <div class="modal-menu__index-logo">
-          <img src="img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
-        </div> <!--Закрытие Логотипа -->
-
-        <!-- 1.2 Закрывающий крестик -->
-        <div class="modal-menu__close-container">
-          <button class="modal-menu__close" type="button" title="Закрыть"></button>
-        </div> <!--Закрытие кнопки меню -->
-
-      </div>
-      </header>
-
-      <ul class="modal-menu__list">
-        <li class="modal-menu__list-item"><a href="#">Каталог товаров</a></li>
-        <li class="modal-menu__list-item"><a href="#">Вязание на заказ</a></li>
-        <li class="modal-menu__list-item"><a href="#">Поиск по сайту</a></li>
-        <li class="modal-menu__list-item"><a href="#">Корзина: <span>пока пуста</span></a></li>
-      </ul> <!--Закрытие Списка Меню -->
-
-    </div>
-
     <!--Всплывающее PopUp-окно Добавить товар -->
     <div class="modal-purchase">
 
@@ -283,7 +323,7 @@
 
     <div class="modal-overlay"></div> <!--блокировка страницы при открытом попапе. div идёт всегда сразу за modal_content -->
 
-  <script src="js/popup.js"> </script>
+  <script src="js/popup_main_menu.js"></script>
 
     </body>
 </html>

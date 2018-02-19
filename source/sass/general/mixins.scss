@@ -1,2 +1,12 @@
 
-// ddd */
+//.set-font(@size, @lh, @weight, @color, @transf:none) {
+//  font-family: @main-font-family;
+//  font-size: @size;
+//  line-height: @lh;
+//  font-weight: @weight;
+//  color: @color;
+//  text-transform: @transf;
+//}
+
+// в css:
+// .set-font(15px, 24px, normal, @black);
