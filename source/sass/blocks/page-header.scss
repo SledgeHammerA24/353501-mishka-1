@@ -541,428 +541,422 @@
 
 @media (min-width: $tablet-width) {
 
-.page-header {
-  width: $tablet-width;
-  min-height: 80px;
-  margin: 0 auto;
+  .page-header {
+    width: $tablet-width;
+    min-height: 80px;
+    margin: 0 auto;
 
-  //background-color: #ffffff;
-  background-color: blue;
-}
+    //background-color: #ffffff;
+    background-color: blue;
+  }
 
 // СКРЫТИЕ ГАМБУРГЕРА/КРЕСТИКА
 
-.page-header__toggle--disabled {
-  display: none;
-}
+  .page-header__toggle--disabled {
+    display: none;
+  }
 
-.page-header__wrapper {
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 668px;
-  height: 148px;
-  margin: 0 auto;
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 668px;
+    height: 148px;
+    margin: 0 auto;
 
-  background-color: pink;
-}
-
-
-.page-header__logo-wrapper {
-  order: 0;
-
-  width: 320px;
-  height: 88px;
-  margin-left: 0;
-
-  background-color: red;
-
-}
-
-.page-header__logo-wrapper img {
-  display: block; // обязательно чтобы работал маргин. img строчный
-  width: 86px;
-  height: 35px;
-  margin-left: 0;
-  margin-top: 25px;
-  //text-align: center; // можно попытаться воровнять и так
-}
-
-// ГЛАВНОЕ МЕНЮ
-.page-header__menu-wrapper {
-  display: flex;
-  order: 3;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-self: flex-start;  // здесь align-self поскольку вторая строка
-
-  width: 334px;
-  height: 60px;
-}
-
-.page-header__menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-items: flex-start; // здесь align-items поскольку единственная строка
+    background-color: pink;
+  }
 
 
-  width: 334px;
-  height: 60px;
+  .page-header__logo-wrapper {
+    order: 0;
 
-  background-color: green;
-}
+    width: 320px;
+    height: 88px;
+    margin-left: 0;
 
+    background-color: red;
+  }
 
-.page-header__menu-item {
+  .page-header__logo-wrapper img {
+    display: block; // обязательно чтобы работал маргин. img строчный
+    width: 86px;
+    height: 35px;
+    margin-left: 0;
+    margin-top: 25px;
+    //text-align: center; // можно попытаться воровнять и так
+  }
 
-  box-sizing: border-box;
-  width: 167px;
-  height: 60px;
-  padding-top: 20px;
+  // ГЛАВНОЕ МЕНЮ
+  .page-header__menu-wrapper {
+    display: flex;
+    order: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: flex-start;  // здесь align-self поскольку вторая строка
 
-  border: none;
-  background-color: yellow;
-}
+    width: 334px;
+    height: 60px;
+  }
 
-.page-header__link {
-  display: inline;   // делаем ссылку строчкой без отступов */
-  padding: 0;
+  .page-header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: flex-start; // здесь align-items поскольку единственная строка
 
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 0.055em;
-  text-align: left;
-  overflow: hidden;
-  text-decoration: none;
-  color: #000000;
-}
+    width: 334px;
+    height: 60px;
 
-.page-header__menu-wrapper a[href]:hover {
-  opacity: 0.6;
-  background-color: transparent;
-}
-
-.page-header__menu-wrapper a[href]:active {
-  opacity: 0.3;
-  background-color: transparent;
-}
-
-// ПОЛЬЗОВАТЕЛЬСКОЕ МЕНЮ
-
-.page-header__user-menu-wrapper {
-  display: flex;
-  order: 2;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
-  width: 348px;
-  height: 88px;
-
-  //background-color: gold;
-}
-
-.page-header__user-menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
-  width: 347px;
-  height: 88px;
-  background-color: green;
-}
-
-.page-header__user-menu-item:nth-of-type(1) {
-
-  width: 83px;
-  height: 88px;
-  background-color: gold;
-}
-
-.page-header__user-menu-item:nth-of-type(2) {
-
-  width: 264px;
-  height: 88px;
-  background-color: white;
-}
-
-.page-header__user-menu-icon {
-  top: 35px;
-  left: 35px;
-}
-
-.main-header__user-menu-item--cart {
-  padding-top: 30px;
-  padding-left: 82px;
-}
-
-.page-header__user-menu-link {
-  display: inline;   // делаем ссылку строчкой без отступов */
-  padding: 0;
-
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.035em;
-  text-align: left;
-  overflow: hidden;
-  text-decoration: none;
-  color: #000000;
-}
-
-.page-header__user-menu-item:nth-of-type(1) .page-header__user-menu-link {
-  font-size: 0;
-}
-
-.page-header__user-menu-wrapper a[href]:hover {
-  opacity: 0.6;
-  background-color: transparent;
-}
-
-.page-header__user-menu-wrapper a[href]:active {
-  opacity: 0.3;
-  background-color: transparent;
-}
+    background-color: green;
+  }
 
 
-// МЕНЮ ПРОДАЖ
+  .page-header__menu-item {
+
+    box-sizing: border-box;
+    width: 167px;
+    height: 60px;
+    padding-top: 20px;
+
+    border: none;
+    background-color: yellow;
+  }
+
+  .page-header__link {
+    display: inline;   // делаем ссылку строчкой без отступов */
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.055em;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .page-header__menu-wrapper a[href]:hover {
+    opacity: 0.6;
+    background-color: transparent;
+  }
+
+  .page-header__menu-wrapper a[href]:active {
+    opacity: 0.3;
+    background-color: transparent;
+  }
+
+  // ПОЛЬЗОВАТЕЛЬСКОЕ МЕНЮ
+
+  .page-header__user-menu-wrapper {
+    display: flex;
+    order: 2;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: 348px;
+    height: 88px;
+
+    //background-color: gold;
+  }
+
+  .page-header__user-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: 347px;
+    height: 88px;
+    background-color: green;
+  }
+
+  .page-header__user-menu-item:nth-of-type(1) {
+    width: 83px;
+    height: 88px;
+    background-color: gold;
+  }
+
+  .page-header__user-menu-item:nth-of-type(2) {
+    width: 264px;
+    height: 88px;
+    background-color: white;
+  }
+
+  .page-header__user-menu-icon {
+    top: 35px;
+    left: 35px;
+  }
+
+  .main-header__user-menu-item--cart {
+    padding-top: 30px;
+    padding-left: 82px;
+  }
+
+  .page-header__user-menu-link {
+    display: inline;   // делаем ссылку строчкой без отступов */
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .page-header__user-menu-item:nth-of-type(1) .page-header__user-menu-link {
+    font-size: 0;
+  }
+
+  .page-header__user-menu-wrapper a[href]:hover {
+    opacity: 0.6;
+    background-color: transparent;
+  }
+
+  .page-header__user-menu-wrapper a[href]:active {
+    opacity: 0.3;
+    background-color: transparent;
+  }
+
+
+   // МЕНЮ ПРОДАЖ
   .page-header__sale-menu-wrapper {
-  display: none;
-}
+    display: none;
+  }
 
 
-// ИНФОРМАЦИЯ
-.page-header__info-wrapper {
-  display: block;
-  order: 4;
-  width: 334px;
-  height: 60px;
-}
+  // ИНФОРМАЦИЯ
+  .page-header__info-wrapper {
+    display: block;
+    order: 4;
+    width: 334px;
+    height: 60px;
+  }
 
-.page-header__info {
+  .page-header__info {
 
-  margin-top: 19px;
-  margin-right: 0;
-}
-
+    margin-top: 19px;
+    margin-right: 0;
+  }
 }
 
 // ДЕСКТОПНАЯ ВЕРСИЯ
 
 @media (min-width: $desktop-width) {
 
-.page-header {
-  width: $desktop-width;
-  min-height: 80px;
-  margin: 0 auto;
+  .page-header {
+    width: $desktop-width;
+    min-height: 80px;
+    margin: 0 auto;
 
-  //background-color: #ffffff;
-  background-color: blue;
-}
+    //background-color: #ffffff;
+    background-color: blue;
+  }
 
-.page-header__wrapper {
-  width: 1050px;
-  height: 148px;
-  margin: 0 auto;
+  .page-header__wrapper {
+    width: 1050px;
+    height: 148px;
+    margin: 0 auto;
 
-  background-color: pink;
-}
+    background-color: pink;
+  }
 
-.page-header__logo-wrapper {
-  order: 1;
+  .page-header__logo-wrapper {
+    order: 1;
 
-  width: 320px;
-  height: 88px;
-  margin-left: 0;
+    width: 320px;
+    height: 88px;
+    margin-left: 0;
 
-  border: none;
-  background-color: red;
-}
+    border: none;
+    background-color: red;
+  }
 
-.page-header__logo-wrapper img {
-  display: block; // обязательно чтобы работал маргин. img строчный
-  width: 86px;
-  height: 35px;
-  margin-left: 100px;
-  margin-top: 25px;
-  //text-align: center; // можно попытаться воровнять и так
-}
+  .page-header__logo-wrapper img {
+    display: block; // обязательно чтобы работал маргин. img строчный
+    width: 86px;
+    height: 35px;
+    margin-left: 100px;
+    margin-top: 25px;
+    //text-align: center; // можно попытаться воровнять и так
+  }
 
     // ГЛАВНОЕ МЕНЮ
 
-.page-header__menu-wrapper {
-  order: 0;
+  .page-header__menu-wrapper {
+    order: 0;
 
-  width: 380px;
-  height: 88px;
-}
+    width: 380px;
+    height: 88px;
+  }
 
-.page-header__menu {
-  width: 380px;
-  height: 88px;
-}
+  .page-header__menu {
+    width: 380px;
+    height: 88px;
+  }
 
-.page-header__menu-item {
+  .page-header__menu-item {
 
-  box-sizing: border-box;
-  width: 190px;
-  height: 88px;
-  padding-top: 30px;
-}
+    box-sizing: border-box;
+    width: 190px;
+    height: 88px;
+    padding-top: 30px;
+  }
 
-.page-header__user-menu-item:nth-of-type(1) {
-  width: 86px;
-}
+  .page-header__user-menu-item:nth-of-type(1) {
+    width: 86px;
+  }
 
-.page-header__menu-item:nth-child(2) {
-  padding-left: 28px;
-}
+  .page-header__menu-item:nth-child(2) {
+    padding-left: 28px;
+  }
 
-.page-header__link {
-  display: inline;   // делаем ссылку строчкой без отступов */
-  padding: 0;
+  .page-header__link {
+    display: inline;   // делаем ссылку строчкой без отступов */
+    padding: 0;
 
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.055em;
-  text-align: left;
-  overflow: hidden;
-  text-decoration: none;
-  color: #000000;
-}
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.055em;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+  }
 
-.page-header__menu-wrapper a[href]:hover {
-  opacity: 0.6;
-  background-color: transparent;
-}
+  .page-header__menu-wrapper a[href]:hover {
+    opacity: 0.6;
+    background-color: transparent;
+  }
 
-.page-header__menu-wrapper a[href]:active {
-  opacity: 0.3;
-  background-color: transparent;
-}
+  .page-header__menu-wrapper a[href]:active {
+    opacity: 0.3;
+    background-color: transparent;
+  }
 
   // ПОЛЬЗОВАТЕЛЬСКОЕ МЕНЮ
 
-.page-header__user-menu-wrapper {
-  order: 2;
-  width: 350px;
+  .page-header__user-menu-wrapper {
+    order: 2;
+    width: 350px;
 
-  border: none;
-}
+    border: none;
+  }
 
-.page-header__user-menu-item {
-  border: none;
-}
+  .page-header__user-menu-item {
+    border: none;
+  }
 
-.page-header__user-menu {
-  width: 350px;
-}
+  .page-header__user-menu {
+    width: 350px;
+  }
 
-.page-header__user-menu-icon {
-  left: 32px;
-}
+  .page-header__user-menu-icon {
+    left: 32px;
+  }
 
-.main-header__user-menu-item--cart {
-  padding-top: 30px;
-  padding-left: 82px;
-}
+  .main-header__user-menu-item--cart {
+    padding-top: 30px;
+    padding-left: 82px;
+  }
 
-.page-header__user-menu-link {
-  display: inline;   // делаем ссылку строчкой без отступов */
-  padding: 0;
+  .page-header__user-menu-link {
+    display: inline;   // делаем ссылку строчкой без отступов */
+    padding: 0;
 
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.035em;
-  text-align: left;
-  overflow: hidden;
-  text-decoration: none;
-  color: #000000;
-}
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+  }
 
-.page-header__user-menu-item:nth-of-type(1) .page-header__user-menu-link {
-  font-size: 0;
-}
+  .page-header__user-menu-item:nth-of-type(1) .page-header__user-menu-link {
+    font-size: 0;
+  }
 
-.page-header__user-menu-wrapper a[href]:hover {
-  opacity: 0.6;
-  background-color: transparent;
-}
+  .page-header__user-menu-wrapper a[href]:hover {
+    opacity: 0.6;
+    background-color: transparent;
+  }
 
-.page-header__user-menu-wrapper a[href]:active {
-  opacity: 0.3;
-  background-color: transparent;
-}
+  .page-header__user-menu-wrapper a[href]:active {
+    opacity: 0.3;
+    background-color: transparent;
+  }
 
   // МЕНЮ ПРОДАЖ
 
-.page-header__sale-menu-wrapper {
-  display: flex;
-  order: 4;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  .page-header__sale-menu-wrapper {
+    display: flex;
+    order: 4;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
-  width: 440px;
-  height: 60px;
+    width: 440px;
+    height: 60px;
 
-  //background-color: gold;
-}
+    //background-color: gold;
+  }
 
-.page-header__sale-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  .page-header__sale-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 
-  width: 440px;
-  height: 60px;
-  background-color: green;
-}
+    width: 440px;
+    height: 60px;
+    background-color: green;
+  }
 
-.page-header__sale-menu-item {
+  .page-header__sale-menu-item {
 
-  box-sizing: border-box;
-  width: 220px;
-  height: 60px;
-  padding-top: 20px;
+    box-sizing: border-box;
+    width: 220px;
+    height: 60px;
+    padding-top: 20px;
 
-  border: none;
-  background-color: yellow;
-}
+    border: none;
+    background-color: yellow;
+  }
 
-.page-header__sale-menu-link {
-  display: inline;   // делаем ссылку строчкой без отступов */
-  padding: 0;
+  .page-header__sale-menu-link {
+    display: inline;   // делаем ссылку строчкой без отступов */
+    padding: 0;
 
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 0.055em;
-  text-align: left;
-  overflow: hidden;
-  text-decoration: none;
-  color: #000000;
-}
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.055em;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+  }
 
-.page-header__sale-menu-wrapper a[href]:hover {
-  opacity: 0.6;
-  background-color: transparent;
-}
+  .page-header__sale-menu-wrapper a[href]:hover {
+    opacity: 0.6;
+    background-color: transparent;
+  }
 
-.page-header__sale-menu-wrapper a[href]:active {
-  opacity: 0.3;
-  background-color: transparent;
-}
+  .page-header__sale-menu-wrapper a[href]:active {
+    opacity: 0.3;
+    background-color: transparent;
+  }
 
   // ИНФОРМАЦИЯ
-.page-header__info-wrapper {
-  order: 5;
-  width: 610px;
-}
-
+  .page-header__info-wrapper {
+    order: 5;
+    width: 610px;
+  }
 }
