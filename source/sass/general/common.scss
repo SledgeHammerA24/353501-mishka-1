@@ -20,26 +20,23 @@ body {
 
   //background-color: #ffffff;
   //background-color: grey;
-
-
 }
 
 @media (min-width: $tablet-width) {
 
-  body {
+body {
 
-    min-width: 768px;  // обязательное требование. чтобы не проиходило обрезание фона  */
-    margin: 0;
-    padding: 0;
+  min-width: 768px;  // обязательное требование. чтобы не проиходило обрезание фона  */
+  margin: 0;
+  padding: 0;
 
-    background-image: url("../1img/wfon/mishka-index-desktop.jpg");
-    background-size: 1250px auto; //ширина высота(с сохр проп)
-    background-repeat: no-repeat;
-    background-position: center top; // гор верт
+  background-image: url("../1img/wfon/mishka-index-desktop.jpg");
+  background-size: 1250px auto; //ширина высота(с сохр проп)
+  background-repeat: no-repeat;
+  background-position: center top; // гор верт
 
-    background-color: grey;
-    }
-
+  background-color: grey;
+  }
 }
 
 main {
