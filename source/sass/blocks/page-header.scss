@@ -238,10 +238,7 @@
   opacity: 0.3;
 }
 
-
-
 // ГЛАВНОЕ МЕНЮ
-
 .page-header__menu-wrapper {
   display: block;
   box-sizing: border-box;
@@ -294,7 +291,6 @@
   //border: 2px solid lightgray;*/
 
   //font-size: 0;
-  text-decoration: none;
 
   cursor: pointer;
 }
@@ -328,10 +324,8 @@
   border: 0; /* убираем бордюры */
   outline: 0; /* убираем контуры */
 
-  text-decoration: none;
-}
+  text-decoration: none; /* убираем оформление текста */
 
-.page-header__user-menu-item {
   position: relative;
 
   box-sizing: border-box;
@@ -378,7 +372,6 @@
   //border: 2px solid lightgray;*/
 
   //font-size: 0;
-  text-decoration: none;
 
   cursor: pointer;
 }
@@ -442,7 +435,6 @@
   //border: 2px solid lightgray;*/
 
   //font-size: 0;
-  text-decoration: none;
 
   cursor: pointer;
 }
@@ -492,55 +484,51 @@
 }
 
 // МОБИЛЬНАЯ ВЕРСИЯ
-
 @media (max-width: $mobile-width-only) {
+  .page-header__mobile-menu--closed .page-header__menu-wrapper {
+    display: none;
+  }
 
-.page-header__mobile-menu--closed .page-header__menu-wrapper {
-  display: none;
-}
+  .page-header__mobile-menu--opened .page-header__menu-wrapper {
+    display: block;
+  }
 
-.page-header__mobile-menu--opened .page-header__menu-wrapper {
-  display: block;
-}
+  .page-header__mobile-menu--closed .page-header__user-menu-wrapper {
+    display: none;
+  }
 
-.page-header__mobile-menu--closed .page-header__user-menu-wrapper {
-  display: none;
-}
+  .page-header__mobile-menu--opened .page-header__user-menu-wrapper {
+    display: block;
+  }
 
-.page-header__mobile-menu--opened .page-header__user-menu-wrapper {
-  display: block;
-}
+  .page-header__sale-menu-wrapper {
+    display: none;
+  }
 
-.page-header__sale-menu-wrapper {
-  display: none;
-}
+  .page-header__info-wrapper {
+    display: none;
+  }
 
-.page-header__info-wrapper {
-  display: none;
-}
+  // На случай, если js отвалился мы должны
+  // спрятать все эти гамбургеры и крестики
+  // и показать в потоке все меню
+  // вводим класс-модификатор page-header--nojs
+  .page-header--nojs .page-header__toggle--disabled {
+    display: none;
+  }
 
-// На случай, если js отвалился мы должны
-// спрятать все эти гамбургеры и крестики
-// и показать в потоке все меню
-// вводим класс-модификатор page-header--nojs
-.page-header--nojs .page-header__toggle--disabled {
-  display: none;
-}
+  .page-header--nojs .page-header__menu-wrapper {
+    display: block;
+  }
 
-.page-header--nojs .page-header__menu-wrapper {
-  display: block;
-}
-
-.page-header--nojs .page-header__user-menu-wrapper {
-  display: block;
-}
-
+  .page-header--nojs .page-header__user-menu-wrapper {
+    display: block;
+  }
 }
 
 // ПЛАНШЕТНАЯ ВЕРСИЯ
 
 @media (min-width: $tablet-width) {
-
   .page-header {
     width: $tablet-width;
     min-height: 80px;
@@ -550,8 +538,7 @@
     background-color: blue;
   }
 
-// СКРЫТИЕ ГАМБУРГЕРА/КРЕСТИКА
-
+  // СКРЫТИЕ ГАМБУРГЕРА/КРЕСТИКА
   .page-header__toggle--disabled {
     display: none;
   }
@@ -723,12 +710,10 @@
     background-color: transparent;
   }
 
-
   // МЕНЮ ПРОДАЖ
   .page-header__sale-menu-wrapper {
     display: none;
   }
-
 
   // ИНФОРМАЦИЯ
   .page-header__info-wrapper {
@@ -748,7 +733,6 @@
 // ДЕСКТОПНАЯ ВЕРСИЯ
 
 @media (min-width: $desktop-width) {
-
   .page-header {
     width: $desktop-width;
     min-height: 80px;
@@ -786,8 +770,7 @@
     //text-align: center; // можно попытаться воровнять и так
   }
 
-    // ГЛАВНОЕ МЕНЮ
-
+  // ГЛАВНОЕ МЕНЮ
   .page-header__menu-wrapper {
     order: 0;
 
