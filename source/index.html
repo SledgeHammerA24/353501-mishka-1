@@ -96,17 +96,14 @@
 
       <!-- 2.1 header main: Фоновая картинка с заголовком страницы + контейнер на ширину 320 пикс -->
       <div class="main-header">
+        <div class="main-header__header-wrapper">
+          <!-- 2.1.1 заголовок страницы -->
+          <div class="main-header__title-wrapper">
+            <h1 class="main-header__title">Милые штуки ручной <br> работы для дома</h1>
+          </div> <!--Закрытие  заголовка -->
+        </div> <!--Закрытие  header-wrapper -->
 
-        <!-- 2.1.1 заголовjк страницы -->
-        <div class="main-header__title-wrapper">
-          <h1 class="main-header__title">Милые штуки ручной <br> работы для дома</h1>
-        </div> <!--Закрытие  заголовка -->
-
-      </div> <!--Закрытие  main-header-title -->
-
-
-        <!-- 2.2 Меню + свой контейнер на ширину 320 пикс -->
-
+        <!-- 2.1.2 Меню + свой контейнер на ширину 320 пикс -->
         <nav class="main-header__navigation-list">
           <ul>
             <li class="main-header__list-item main-header__list-item--interior">
@@ -117,45 +114,56 @@
             </li>
           </ul>
         </nav> <!--Закрытие Меню -->
+      </div> <!--Закрытие  main-header -->
 
-      </div> <!--Закрытие  header main -->
-
-        <!-- 2.2 Товар недели -->
-        <article class="weeks-item container">
-          <header>
-            <h2 class="weeks-item__title-1">Вязаные корзинки</h2>
-            <h3 class="weeks-item__title-2">Товар недели</h3>
+      <!-- 2.2 Товар недели -->
+      <article class="weeks-item container">
+        <header class="weeks-item__header-wrapper">
+          <h2 class="weeks-item__title-1">Вязаные корзинки</h2>
+          <h3 class="weeks-item__title-2">Товар недели</h3>
         </header>
-        <section>
-          <p class="weeks-item__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.</p>
+        <section class="weeks-item__content-wrapper">
+          <div class="weeks-item__description-wrapper">
+            <p class="weeks-item__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.</p>
 
-          <!--2.3.1 Таблица с характеристиками товара -->
-          <table class="weeks-item__properties-table">
-            <tr class="weeks-item__trow--tr1">
-              <th class="weeks-item__table-head">Цвет:</th>
-              <td class="weeks-item__table-cell">"Тиффани"/серый</td>
-            </tr>
-            <tr>
-              <th class="weeks-item__table-head">Диаметр:</th>
-              <td class="weeks-item__table-cell">25 см</td>
-            </tr>
-            <tr>
-              <th class="weeks-item__table-head">Высота:</th>
-              <td class="weeks-item__table-cell">15 см</td>
-            </tr>
-          </table>
-          <div class="weeks-item__photo">
-          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Фото товара">
+            <!--2.3.1 Таблица с характеристиками товара -->
+            <table class="weeks-item__properties-table">
+              <tr class="weeks-item__table-head">
+                <th class="weeks-item__table-head">Цвет:</th>
+                <td class="weeks-item__table-cell">"Тиффани"/серый</td>
+              </tr>
+              <tr>
+                <th class="weeks-item__table-head">Диаметр:</th>
+                <td class="weeks-item__table-cell">25 см</td>
+              </tr>
+              <tr>
+                <th class="weeks-item__table-head">Высота:</th>
+                <td class="weeks-item__table-cell">15 см</td>
+              </tr>
+            </table>
           </div>
 
-          <p class="weeks-item__price">Цена:990 руб.</p>
-        </section>
-        <footer>
-          <a class="btn-inline-block weeks-item--btn" href="#">Заказать</a>
-        </footer>
-        </article>
+          <div class="weeks-item__photo-wrapper">
+          <!--<img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Фото товара">-->
+            <picture>
+              <source type="image/webp" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+              <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаная корзинка">
+            </picture>
+          </div>
 
-        <!-- 2.3 Самореклама Presentation Картинки будут вставлены спрайтом -->
+          <footer class="weeks-item__footer-wrapper">
+            <p class="weeks-item__price">Цена:990 руб.</p>
+            <a class="btn-inline-block weeks-item--btn" href="#">Заказать</a>
+          </footer>
+
+        </section>
+      </article>
+
+        <!-- 2.4 Самореклама Presentation Картинки будут вставлены спрайтом -->
         <section class="presentation container">
 
           <h2 class="presentation__title">Коротко о нас:</h2>
@@ -188,74 +196,81 @@
 
         </section>
 
-        <!-- 2.4 Отзывы response-->
+        <!-- 2.5 Отзывы response-->
         <section class="response container">
+          <div class="response__wrapper">
 
-          <h2 class="response__title">Отзывы</h2>
+            <h2 class="response__title">Отзывы</h2>
 
-          <article class="response__post">
-            <section class="response__content">
-              <p class="response__comment">Я молодая мама, но всё равно фографии не набирали и близко того количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            </section>
-            <header class="response__header-wrapper">
-              <h3 class="response__author">Анастасия Красильникова</h3>
-              <a class="response__instagram" href="#">@misssssiskras</a>
-            </header>
-          </article>
+            <article class="response__post">
+              <section class="response__content">
+                <p class="response__comment">Я молодая мама, но всё равно фографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              </section>
+              <header class="response__header-wrapper">
+                <h3 class="response__author">Анастасия Красильникова</h3>
+                <a class="response__instagram" href="#">@misssssiskras</a>
+              </header>
+            </article>
 
-          <div class="response__btn-wrapper flex-block flex-block--space-between">
-            <a class="btn-flex response__btn-prev" href="#">Назад</a>
-            <a class="btn-flex response__btn-next" href="#">Вперёд</a>
-            <!--<button class="btn-flex response__btn-prev" type="button" title="Назад">></button>-->
-            <!--<button class="btn-flex response__btn-next" type="button" title="Вперёд"></button>-->
+            <div class="response__btn-wrapper flex-block flex-block--space-between">
+              <a class="btn-flex response__btn-prev" href="#">Назад</a>
+              <a class="btn-flex response__btn-next" href="#">Вперёд</a>
+              <!--<button class="btn-flex response__btn-prev" type="button" title="Назад">></button>-->
+              <!--<button class="btn-flex response__btn-next" type="button" title="Вперёд"></button>-->
+            </div>
+
+            <a class="btn-inline-block response__btn-write-us" href="#">Написать</a>
+
           </div>
-
-          <a class="btn-inline-block response__btn-write-us" href="#">Написать</a>
-
         </section> <!--Закрытие response -->
 
 
       </main> <!--Закрытие main -->
 
       <!-- 3 Блок контакты Contacts + карта Map -->
-      <section class="contacts">
+      <section class="contacts container">
 
-        <section class="contacts__address-wrapper container">
-
+        <section class="contacts__wrapper">
             <h3 class="contacts__title">Контакты</h3>
-
-            <!--3.2 Таблица с контактами -->
-            <table class="contacts__properties-table">
-              <tr>
-                <th class="contacts__table-head">e-mail:</th>
-                <td class="contacts__table-cell">
-                  <a class="contacts__email" href="#">info@mimimishkashop.ru</a>
-                </td>
-              </tr>
-              <tr>
-                <th class="contacts__table-head">адрес:</th>
-                <td class="contacts__table-cell">г. Санкт-Петербург,<br>
-                  ул. Большая Конюшенная,<br>
-                  д.18/8, офис 101
-                </td>
-              </tr>
-            </table>
-        </section> <!--Закрытие блока container -->
+            <!--3.2 Блок с контактами -->
+            <div class="contacts__address-wrapper">
+              <div class="contacts__email flex-block-3">
+                <span class="contacts__type">e-mail:</span>
+                <a class="contacts__link-style" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </div>
+              <div class="contacts__address flex-block-2 flex-block--flex-start">
+                <span class="contacts__type address--mod">адрес: </span>
+                <p class="contacts__address-text">
+                г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.19/8, офис 101
+                </p>
+              </div>
+            </div>
+        </section> <!--Закрытие блока contacts__wrapper -->
 
         <!-- вставить бекграундом карту -->
-        <div class="contacts__map-wrapper google-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5985375309226!2d30.321119921714985!3d59.9388035869697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1503579145443" width="320" height="456" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="contacts__map-wrapper">
+          <iframe class="contacts__google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5985375309226!2d30.321119921714985!3d59.9388035869697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1503579145443" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
         <!-- кнопка -->
-        <div class="contacts__btn-wrapper container">
+        <div class="contacts__btn-wrapper">
           <a class="btn-inline-block contacts__btn" href="#">Напишите нам</a>
         </div>
 
       </section> <!--Закрытие секции контактов -->
 
+
     <!-- 4. Подвал footer - основной подвал сайта + класс main_footer -->
     <footer class="page-footer container">
+
+      <div class="page-footer__logo">
+        <a class="page-footer__logo-link">
+          Мишка
+          <svg class="page-footer__logo-icon" width="102" height="34" aria-label="Логотип сайта «Мишка»">
+            <use xlink:href="#page-footer-footer"></use>
+          </svg>
+        </a>
+      </div>
 
         <!--Ссылки на соцсети -->
         <div class="social">
@@ -279,7 +294,7 @@
       </footer>
 
     <!--Всплывающее PopUp-окно Добавить товар -->
-    <div class="modal-purchase">
+    <div class="modal-purchase container">
 
       <div class="modal-purchase__purchase-wrapper">
 

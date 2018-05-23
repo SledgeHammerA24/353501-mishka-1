@@ -23,7 +23,30 @@
   flex-direction: column;
 }
 
+.flex-block--center {
+  justify-content: center;
+}
+
 .flex-block--wrap {
   flex-wrap: wrap;
   align-content: flex-start;
+}
+
+.flex-block-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  //background-color: yellow;
+}
+
+.flex-block-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  //background-color: yellow;
 }

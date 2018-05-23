@@ -1,11 +1,46 @@
 .page-footer {
-  width: 320px;
   height: 160px;
-  margin: 0 auto;
+  margin-top: 40px;
 
   color: #000000;
 
   background-color: #f1f1f1;
+}
+
+.page-footer__logo {
+    display: none;
+    width: 102px;
+    height: 34px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.page-footer__logo-link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .page-footer__logo-icon:hover,
+  .page-footer__logo-icon:focus {
+    fill: $bg-green;
+    outline: none;
+  }
+
+  .page-footer__logo-icon:active {
+    opacity: 0.3;
+  }
+
+  .page-footer__social {
+    margin-bottom: 27px;
 }
 
 .page-footer--mishka-form {
@@ -14,4 +49,41 @@
 
 .page-footer--mishka-catalog {
   margin-top: 58px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 144px;
+    margin-top: 30px;
+    margin-left: 0 auto;
+  }
+
+  .page-footer__logo {
+    display: block;
+    margin-left: 51px;
+    margin-top: -10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    background-color: red;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    justify-content: space-between;
+    margin-top: 106px;
+  }
+
+  .page-footer__logo {
+    margin-left: 1px;
+    margin-top: -9px;
+
+    background-color: red;
+  }
 }

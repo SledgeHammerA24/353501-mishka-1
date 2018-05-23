@@ -30,7 +30,7 @@
   width: 260px;
   height: 280px;
 
-  background-color: red;
+  //background-color: red;
 }
 
 .response__comment {
@@ -134,4 +134,191 @@
 
 .response__btn-write a {
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .response {
+    width: $tablet-width;
+    height: 540px;
+    padding: 0;
+    margin: 0 auto;
+
+
+    background-image: url("../img/review@1x.jpg"), url("../img/review@1x.webp");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 350px auto;
+
+
+    background-color: gold;
+
+//    &::after {
+//      height: 16px;
+//      width: 100%;
+//      bottom: 0;
+//      background-size: 768px 16px;
+//      background-position: left 20px center;
+//    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg"), url("../img/review@2x.webp");
+    }
+  }
+
+  .response__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 668px;
+    height: 360px;
+    padding: 0 50px;
+    padding-top: 80px;
+
+    //background-color: cyan;
+  }
+
+  .response__title {
+    width: 200px;
+    padding: 0;
+    margin-top: -2px;
+    margin-left: -6px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 1;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .response__post {
+    width: 668px;
+    height: 150px;
+    margin-top: 15px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 3;
+
+    background-color: green;
+  }
+
+  .response__content p {
+    margin: 0;
+  }
+
+  .response__content {
+    width: 668px;
+    height: 150px;
+  }
+
+
+  .response__comment {
+    padding-top: 0;
+
+    font-size: 17px; // в "p" не работает */
+  }
+
+  .response__author {
+    padding-top: 25px;
+  }
+
+  .response__btn-wrapper {
+    width: 166px;
+    height: 50px;
+    margin-top: 0;
+    margin-left: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 4;
+    }
+
+    .response__btn-prev,
+    .response__btn-next {
+      width: 83px;
+      height: 50px;
+      padding: 0;
+
+      border: none;
+      background-color: red;
+    }
+
+  .response__btn-write-us {
+    width: 171px;
+    margin-top: 0px;
+    margin-left: 298px;
+    padding: 8px 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .response {
+    width: 1050px;
+
+
+    background-image: url("../img/review@1x.jpg"), url("../img/review@1x.webp");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 350px auto;
+
+
+    background-color: gold;
+
+//    &::after {
+//      height: 16px;
+//      width: 100%;
+//      bottom: 0;
+//      background-size: 768px 16px;
+//      background-position: left 20px center;
+//    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg"), url("../img/review@2x.webp");
+    }
+  }
+
+  .response__wrapper {
+    width: 875px;
+    height: 320px;
+    padding-top: 80px;
+    padding-left: 175px;
+
+    //background-color: cyan;
+  }
+
+  .response__title {
+    width: 250px;
+    margin-top: -8px;
+    margin-left: -2px;
+
+    font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 0.03em;
+  }
+
+  .response__post {
+    width: 790px;
+    height: 90px;
+    margin-top: 5px;
+
+    background-color: green;
+  }
+
+  .response__content {
+    width: 790px;
+    height: 90px;
+  }
+
+  .response__author {
+    padding-top: 35px;
+  }
+
+  .response__btn-wrapper {
+    margin-left: 705px;
+    }
+
+  .response__btn-write-us {
+    margin-left: 452px;
+  }
 }

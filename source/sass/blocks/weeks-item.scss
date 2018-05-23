@@ -6,6 +6,13 @@
   background-color: blue;
 }
 
+.weeks-item__header-wrapper {
+  width: 260px;
+  height: 90px;
+
+  background-color: yellow;
+}
+
 .weeks-item__title-1 {
   margin: 0;
   padding-top: 29px;
@@ -21,8 +28,16 @@
   color: #63d1bb;
 }
 
+.weeks-item__description-wrapper {
+  width: 260px;
+  height: 254px;
+
+  background-color: green;
+}
+
 .weeks-item__text {
-  padding-top: 9px;
+  margin-top: 0;
+  padding-top: 17px;
 
   font-weight: 400;
   font-size: 15px;
@@ -35,7 +50,7 @@
 .weeks-item__properties-table {
   margin: 0;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 8px;
 
   background-color: magenta;
 }
@@ -73,25 +88,34 @@
   color: #444444;
 }
 
-// позиционирование первого ряда */
-.weeks-item__trow--tr1 {
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
 
-.weeks-item__photo {
-  margin-top: 19px;
+.weeks-item__photo-wrapper {
+  display: block;
+  width: 260px;
+  height: 315px;
+  margin-top: 0;
+
+  background-color: grey;
 }
 
 // перестраховка. явное задание размеров картинки */
 .weeks-item__photo img {
+  display: block;
   width: 260px;
   height: 315px;
 }
 
+
+.weeks-item__footer-wrapper {
+  width: 260px;
+  height: 166px;
+  //margin-top: 19px;
+}
+
 .weeks-item__price {
-  padding-top: 0;
-  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  margin: 0;
 
   font-weight: 700;
   font-size: 17px;
@@ -116,4 +140,170 @@
   width: 73px;
 
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .weeks-item {
+    width: 668px;
+    height: 620px;
+    padding: 0 50px;
+  }
+
+  .weeks-item__header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 668px;
+    height: 140px;
+  }
+
+  .weeks-item__title-1 {
+    margin: 0;
+    padding-top: 0px;
+
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 50px;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .weeks-item__title-2 {
+    width: 126px;
+    margin: 0;
+    padding-top: 5px;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #63d1bb;
+  }
+
+  .weeks-item__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 668px;
+    height: 480px;
+  }
+
+  .weeks-item__description-wrapper {
+    width: 290px;
+    height: 270px;
+    order: 1;
+  }
+
+  .weeks-item__photo img {
+    width: 334px;
+    height: 404px;
+  }
+
+  .weeks-item__photo-wrapper {
+    width: 334px;
+    height: 404px;
+    order: 3;
+    padding-top: 11px;
+    padding-left: 44px;
+
+    background-color: red;
+  }
+
+  .weeks-item__footer-wrapper {
+    width: 290px;
+    height: 145px;
+    order: 2;
+  }
+
+  .weeks-item__text {
+    padding-top: 5px;
+    margin-bottom: 10px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .weeks-item__properties-table {
+    padding-top: 32px;
+  }
+
+  .weeks-item__price {
+    padding-top: 36px;
+    padding-bottom: 34px;
+
+    font-size: 20px;
+  }
+
+  .weeks-item--btn {
+    padding: 15px 98px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .weeks-item {
+    width: 1050px;
+    height: 800px;
+  }
+
+  .weeks-item__header-wrapper {
+    position: relative;
+    top: 118px;
+
+    flex-direction: row-reverse;
+    width: 700px;
+    height: 71px;
+  }
+
+  .weeks-item__title-1 {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .weeks-item__title-2 {
+    padding-left: 20px;
+  }
+
+  .weeks-item__content-wrapper {
+    width: 875px;
+    height: 710px;
+    padding-left: 175px;
+  }
+
+  .weeks-item__description-wrapper {
+    height: 460px;
+  }
+
+  .weeks-item__text {
+    padding-top: 158px;
+  }
+
+  .weeks-item__properties-table {
+    padding-top: 45px;
+  }
+
+  .weeks-item__photo img {
+    width: 525px;
+    height: 636px;
+  }
+
+  .weeks-item__photo-wrapper {
+    width: 525px;
+    height: 636px;
+    padding-top: 0;
+    padding-left: 61px;
+
+    background-color: red;
+  }
+
+  .weeks-item__price {
+    padding-top: 66px;
+    padding-left: 6px;
+  }
 }
