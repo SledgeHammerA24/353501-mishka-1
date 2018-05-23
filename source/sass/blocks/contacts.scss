@@ -1,12 +1,8 @@
 
 .contacts {
-  width: 320px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+
 
   color: #000000;
-
-  background-color: #ffffff;
 }
 
 .contacts__title {
@@ -20,47 +16,76 @@
   color: #000000;
 }
 
-
-.contacts__properties-table {
-  margin: 0;
-  padding: 0;
-  padding-top: 26px;
-  padding-bottom: 12px;
-
-  //background-color: magenta;
+.contacts__wrapper {
+  width: 260px;
+  min-height: 311px;
+  margin: 0 auto;
 }
 
+.contacts__email {
+  width: 260px;
+  height: 55px;
+  padding-top: 13px;
 
-.contacts__properties-table td {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 26px;
-  //padding: 0;  // имеет высший приоритет над свойствами строк и столбцов */
-  //padding-top: 36px;  // имеет высший приоритет над свойствами строк и столбцов */
-
-  //border: 1px solid black;
+  background-color: grey;
 }
 
-// задание свойств ячеек-заголовка */
-.contacts__properties-table th {
-  width: 73px;
+.contacts__type {
+  width: 78px;
   height: 40px;
-  padding-bottom: 16px;
+  padding-top: 7px;
+  flex-grow: 0;
+  flex-shrink: 0;
 
   font-weight: 400;
   font-size: 15px;
   line-height: 30px;
   text-align: left;
-  vertical-align: top;
+  vertical-align: center;
   letter-spacing: normal;
-  color: #444444;
-
-  //background-color: blue;
+  color: $font-grey;
 }
 
-// задание свойств ячеек */
-.contacts__table-cell {
-  width: 110px;
+.contacts__link-style {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  text-decoration: none;
+  color: $font-grey;
+
+  border-bottom: 1px solid #62d1ba;
+
+  &:hover,
+  &:focus {
+    color: #62d1ba;
+
+    border-bottom: 1px solid #46c1ae;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__address {
+  width: 260px;
+  min-height: 55px;
+  padding-top: 10px;
+
+  background-color: cyan;
+}
+
+.contacts__address-text {
+  width: 143px;
+  height: 120px;
+  margin-top: 7px;
+  margin-right: 38px;
+  flex-grow: 0;
+  flex-shrink: 0;
 
   letter-spacing: normal;
   font-weight: 400;
@@ -73,23 +98,26 @@
 }
 
 .contacts__map-wrapper {
-  width: 322px;
-  height: 457px;
-  margin-top: 20px;
+  width: $mobile-width;
+  height: 456px;
+  margin: 0 auto;
+  margin-top: 2px;
 
-  background-image: url("../img/map-mobile@1x.jpg"); // само помещение спрайта в окошко(или кнопку)*/
+  background-image: url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
 
-.google-map {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
+.contacts__google-map {
+  width: $mobile-width;
+  height: 456px;
+  border: none;
 }
 
 .contacts__btn-wrapper {
   display: block;
-}
+  width: 260px;
+  margin: 0 auto;
+  }
 
 // Кнопка на всю ширину контейнера */
 
@@ -98,7 +126,7 @@
   height: 20px;
   padding: 14px 0; // центровка маргином. фикс паддинг убираем */
   margin: 0 auto; // центруем маргином */
-  margin-top: 37px; // отталкиваемся от верхнего контейнера */
+  margin-top: 40px; // отталкиваемся от верхнего контейнера */
 
   font-weight: 700;
   font-size: 18px;
@@ -111,4 +139,198 @@
   color: #444444;
 
   border: 2px solid #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    height: 900px;
+  }
+
+  .contacts__wrapper {
+    position: relative;
+    width: 668px;
+    min-height: 308px;
+    margin: 0 auto;
+
+    background-color: magenta;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 48px;
+      right: 3px;
+      width: 47px;
+      height: 82px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .contacts__title {
+    margin: 0;
+    padding-top: 63px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__address-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 25px;
+  }
+
+  .contacts__email {
+    width: 334px;
+  }
+
+  .contacts__type {
+    padding-top: 7px;
+
+    font-size: 17px;
+  }
+
+  .contacts__link-style {
+    font-size: 17px;
+}
+
+  .contacts__address {
+    width: 334px;
+    min-height: 90px;
+
+    background-color: cyan;
+  }
+
+  .address--mod {
+    padding-top: 13px;
+  }
+
+  .contacts__address-text {
+    width: 220px;
+    height: 90px;
+    margin-top: 13px;
+
+    font-size: 17px;
+  }
+
+  .contacts__map-wrapper {
+    width: $tablet-width;
+    margin-top: 0;
+
+    background-image: none;
+    background-image: url("../img/map-tablet@1x.jpg");
+  }
+
+  .contacts__google-map {
+    width: $tablet-width;
+  }
+
+  .contacts__btn-wrapper {
+    width: 230px;
+  }
+
+  // Кнопка на всю ширину контейнера */
+  .contacts__btn {
+    width: 226px;
+    margin-top: 56px;
+
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 456px;
+    margin-top: 78px;
+  }
+
+  .contacts__wrapper {
+    width: 354px;
+    min-height: 100px;
+    padding-left: 170px;
+    padding-top: 10px;
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    background-color: magenta;
+
+    &::after {
+      top: 62px;
+      left: 62px;
+    }
+  }
+
+  .contacts__title {
+    margin: 0;
+    padding-top: 63px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contacts__address-wrapper {
+    flex-direction: column;
+
+    margin-left: 3px;
+    margin-top: 22px;
+  }
+
+  .contacts__type {
+    padding-top: 7px;
+
+    letter-spacing: 0.04em;
+  }
+
+  .contacts__link-style {
+    letter-spacing: 0.035em;
+  }
+
+  .address--mod {
+    padding-top: 6px;
+  }
+
+  .contacts__address-text {
+    width: 240px;
+    margin-top: 6px;
+
+    letter-spacing: 0.030em;
+  }
+
+  .contacts__map-wrapper {
+    width: 525px;
+    order: 3;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    background-image: none;
+    background-image: url("../img/map-desktop@1x.jpg");
+  }
+
+  .contacts__google-map {
+    width: 525px;
+  }
+
+  .contacts__btn-wrapper {
+    width: 230px;
+    order: 2;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  // Кнопка на всю ширину контейнера */
+  .contacts__btn {
+    margin-left: 27px;
+    margin-top: 61px;
+
+
+    font-size: 17px;
+  }
 }

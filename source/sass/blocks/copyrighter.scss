@@ -84,3 +84,13 @@
 .copyrighter__btn:active::before {
   opacity: 0.3;
 }
+
+@media (min-width: $tablet-width) {
+  .copyrighter {
+    margin: 0;
+    margin-left: 75px;
+    margin-top: -13px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}

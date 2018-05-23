@@ -72,3 +72,14 @@
 .social__btn:active::before {
   opacity: 0.3;
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    width: 160px;
+    margin: 0;
+    margin-left: 148px;
+    margin-top: 5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}

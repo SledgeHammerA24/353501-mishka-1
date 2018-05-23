@@ -22,21 +22,6 @@ body {
   //background-color: grey;
 }
 
-@media (min-width: $tablet-width) {
-  body {
-    min-width: 768px;  // обязательное требование. чтобы не проиходило обрезание фона  */
-    margin: 0;
-    padding: 0;
-
-    background-image: url("../1img/wfon/mishka-index-desktop.jpg");
-    background-size: 1250px auto; //ширина высота(с сохр проп)
-    background-repeat: no-repeat;
-    background-position: center top; // гор верт
-
-    background-color: grey;
-  }
-}
-
 main {
   width: 320px;
   margin: auto;
@@ -47,12 +32,10 @@ main {
   //background-color: cyan;
 }
 
-
 .container {
-  width: 260px;
+  width: $mobile-width;
   min-height: 80px;
   margin: 0 auto;
-  padding: 0 30px;
 
   //background-color: green;
 }
@@ -105,4 +88,71 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
   overflow: hidden;
+}
+
+
+@media (min-width: $tablet-width) {
+  body {
+    min-width: 768px;  // обязательное требование. чтобы не проиходило обрезание фона  */
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../1img/wfon/mishka-index-desktop.jpg");
+    background-size: 1250px auto; //ширина высота(с сохр проп)
+    background-repeat: no-repeat;
+    background-position: center top; // гор верт
+
+    background-color: grey;
+  }
+
+  main {
+    width: $tablet-width;
+    margin: auto;
+
+    color: #000000;
+
+    background-color: #ffffff;
+    //background-color: cyan;
+  }
+
+  .container {
+    width: $tablet-width;
+    min-height: 40px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    min-width: $desktop-width;  // обязательное требование. чтобы не проиходило обрезание фона  */
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../1img/wfon/mishka-index-desktop.jpg");
+    background-size: 1250px auto; //ширина высота(с сохр проп)
+    background-repeat: no-repeat;
+    background-position: center top; // гор верт
+
+    background-color: grey;
+  }
+
+  main {
+    width: $desktop-width;
+    margin: auto;
+
+    color: #000000;
+
+    background-color: #ffffff;
+    //background-color: cyan;
+  }
+
+  .container {
+    width: 1050px;
+    min-height: 40px;
+    margin: 0 auto;
+  }
+
+
+
 }

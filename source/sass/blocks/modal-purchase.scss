@@ -7,8 +7,8 @@
   right: 0;
   z-index: 100;
 
-  display: none; // временное скрытие */
-  width: 320px;
+  display: block; // временное скрытие */
+  //width: $mobile-width;
   min-height: 3932px;
   margin: 0 auto;
 
@@ -20,7 +20,7 @@
 
 .modal-purchase__purchase-wrapper {
   display: block;
-  width: 320px;
+  width: $mobile-width;
   min-height: 335px;
   margin-top: 1045px;
 
@@ -268,4 +268,60 @@
   color: #ffffff;
 
   background-color: #63d1bb;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-purchase {
+    min-height: 3710px;
+  }
+
+  .modal-purchase__purchase-wrapper {
+    display: block;
+    width: 566px;
+    margin: 0 auto;
+    margin-top: 1530px;
+
+    border: 1px solid #c7c7c7;
+  }
+
+  .modal-purchase__header-wrapper {
+    width: 400px;
+
+    color: #000000;
+  }
+
+  // Бокс Закрывающего крестика */
+  .modal-purchase__close-box {
+    position: absolute;
+    top: 30px;
+    left: 510px;
+  }
+
+  .modal-purchase__title {
+    width: 375px;
+    padding-top: 15px;
+    padding-left: 100px;
+
+    font-size: 30px;
+    line-height: 57px;
+    letter-spacing: 0.02em;
+  }
+
+  .modal-purchase__text {
+    display: block;
+    width: 160px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.045em;
+    color: #444444;
+  }
+
+
 }

@@ -1,6 +1,5 @@
 
 .presentation {
-
   width: 260px;
   height: 850px;
 
@@ -9,55 +8,49 @@
 
 .presentation__title {
   margin: 0;
-  letter-spacing: 0.035em;
-
   padding-top: 30px;
   padding-bottom: 10px;
+
+  letter-spacing: 0.035em;
 }
 
 .presentation ul {
-  text-decoration: none;
-  list-style: none;
   padding: 0;
   margin: 0;
+
+  text-decoration: none;
+  list-style: none;
 }
 
 .presentation__list-wrapper {
-
   display: block;
   width: 260px;
   height: 720px;
-
   padding-top: 10px;
 
   //background-color: pink;
 }
 
 .presentation__list li {
-
   display: block;
-
   margin-top: 2px;
 
   //background-color: pink;*/
 }
 
 .presentation__list-item {
-
   display: block;
   width: 255px;
   height: 120px;
+  padding-top: 0;
+  margin: 0;
 
-
+  font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  font-weight: 700;
   letter-spacing: 0.045em;
   text-align: left;
   color: #000000;
-
-  padding-top: 0;
-  margin: 0;
 }
 
 // Первый вариант когда псевдоэлемент вставляется */
@@ -137,7 +130,6 @@
   width: 60px;
   height: 60px;
 
-
   background-image: url("../img/icon-feature-gift.svg"); // само помещение спрайта в окошко(или кнопку)*/
   background-repeat: no-repeat;
   background-position: 4px 15px;
@@ -178,4 +170,80 @@
 .presentation__text {
   margin: 0;
   margin-top: 7px;
+}
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    width: 668px;
+    height: 644px;
+    padding: 0 50px;
+  }
+
+  .presentation__title {
+    padding-top: 55px;
+    padding-bottom: 35px;
+    margin-left: -3px;
+
+    font-size: 43px;
+    line-height: 50px;
+    letter-spacing: 0.02em;
+  }
+
+  .presentation__list-wrapper {
+    width: 668px;
+    height: 504px;
+    padding-top: 0;
+
+    background-color: pink;
+  }
+
+  .presentation__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 668px;
+    height: 480px;
+
+    background-color: cyan;
+  }
+
+  .presentation__list-item {
+    width: 305px;
+    height: 153px;
+  }
+
+  .presentation__text {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.055em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .presentation {
+    width: 1050px;
+    height: 666px;
+  }
+
+  .presentation__title {
+    padding-top: 63px;
+    margin-left: 173px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .presentation__list-wrapper {
+    height: 510px;
+    margin-left: 175px;
+
+    background-color: pink;
+  }
+
+  .presentation__list {
+    align-content: space-between;
+    width: 656px;
+
+    background-color: cyan;
+  }
 }
